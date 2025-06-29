@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навушники – CT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="icon5.png">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background-color: #f6e4c1; padding: 20px; }
+    h1 { font-size: 28px; margin-bottom: 20px; color: #8c3b16; }
+    .grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .card { background: white; border-radius: 12px; padding: 20px; width: 200px; text-align: center; }
+    .card img { width: 100%; height: auto; border-radius: 8px; }
+    .card button { margin-top: 10px; display: block; text-decoration: none; border: none; background: #8c3b16; color: white; padding: 8px; border-radius: 6px; cursor: pointer; }
+
+    .card a { margin-top: 10px; display: block; text-decoration: none; border: none; background: #8c3b16; color: white; border-radius: 6px; cursor: pointer; align: center;}
+    header, footer { background-color: #fff0da; 
+      padding: 20px 40px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      border-radius: 8px; }
+    .logo { font-family: 'Montserrat', sans-serif; 
+      font-size: 24px; 
+      font-weight: 700; 
+      color: #8c3b16; }
+    nav a { margin: 0 15px; 
+      text-decoration: none; 
+      color: #2c1e13; 
+      font-weight: 500;
+      border-radius: 8px; }
+    .cta-btn { background: #d9981d; 
+      color: white; 
+      padding: 10px 20px;
+       border-radius: 8px; 
+       text-decoration: none; 
+       font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">CT</div>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+      <a href="favorites.html">Обране</a>
+  
+      
+    </nav>
+    <div id="user-area" style="text-align: right; padding: 10px;">
+  <span id="user-name"></span>
+  <a href="login.html" id="login-link" style="
+  margin-left: 10px;
+  ">Увійти</a>
+  <button id="logout-btn" style="
+  display:none; 
+  margin-left: 10px; 
+  background:#8c3b16; 
+  color:white; 
+  border:none; 
+  padding:5px 10px; 
+  border-radius:6px; 
+  cursor:pointer;
+  ">Вийти</button>
+</div>
+  </header>
+  <br>
+  <h1>Годинники</h1>
+  <br>
+  <div class="grid">
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S02a8bbef27c84c27b8ca473c153b7593d.jpg_220x220q75.jpg" alt="фото" />
+        <p>Нові розкішні годинники </p>
+        <button onclick="addToFavorites('Нові розкішні годинники ', 'Нові розкішні годинники для чоловіків Relojes Para Hombre Годинник Повсякденний годинник Кварцові наручні годинники Чоловіки Найкращі подарунки Дешева ціна Relógio Pulso', 'https://bt.rozetka.com.ua/ua/443349848/p443349848/', 'https://s.click.aliexpress.com/e/_olc480W', 'https://ae-pic-a1.aliexpress-media.com/kf/S02a8bbef27c84c27b8ca473c153b7593d.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Нові розкішні годинники ', 'Нові розкішні годинники для чоловіків Relojes Para Hombre Годинник Повсякденний годинник Кварцові наручні годинники Чоловіки Найкращі подарунки Дешева ціна Relógio Pulso', 'https://bt.rozetka.com.ua/ua/443349848/p443349848/', 'https://s.click.aliexpress.com/e/_olc480W', 'https://ae-pic-a1.aliexpress-media.com/kf/S02a8bbef27c84c27b8ca473c153b7593d.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/H7da6ca29cf374883833d43fea03d2079X.jpg_220x220q75.jpg" alt="фото" />
+        <p>Чоловічий діловий годинник</p>
+        <button onclick="addToFavorites('Чоловічий діловий годинник', 'CURREN Новий чоловічий діловий годинник Повністю сталевий кварц Преміум бренд Розкішний спортивний водонепроникний повсякденний чоловічий наручний годинник Relogio Masculino', 'https://bt.rozetka.com.ua/ua/520096354/p520096354/', 'https://s.click.aliexpress.com/e/_ooxOfbg', 'https://ae-pic-a1.aliexpress-media.com/kf/H7da6ca29cf374883833d43fea03d2079X.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Чоловічий діловий годинник', 'CURREN Новий чоловічий діловий годинник Повністю сталевий кварц Преміум бренд Розкішний спортивний водонепроникний повсякденний чоловічий наручний годинник Relogio Masculino', 'https://bt.rozetka.com.ua/ua/520096354/p520096354/', 'https://s.click.aliexpress.com/e/_ooxOfbg', 'https://ae-pic-a1.aliexpress-media.com/kf/H7da6ca29cf374883833d43fea03d2079X.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S75201f47a5114f1391b02c10e28dcaa3c.jpg_220x220q75.jpg" alt="фото" />
+        <p>Годинники для чоловіків</p>
+        <button onclick="addToFavorites('Годинники для чоловіків', '2024 Годинники для чоловіків Розкішні годинники Повсякденні годинники Кварцові наручні годинники для чоловіків Найкращі подарунки Дешева ціна Relojes para hombre Relógio Pulso', 'https://bt.rozetka.com.ua/ua/443349854/p443349854/', 'https://s.click.aliexpress.com/e/_onnVLeQ', 'https://ae-pic-a1.aliexpress-media.com/kf/S75201f47a5114f1391b02c10e28dcaa3c.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Годинники для чоловіків', '2024 Годинники для чоловіків Розкішні годинники Повсякденні годинники Кварцові наручні годинники для чоловіків Найкращі подарунки Дешева ціна Relojes para hombre Relógio Pulso', 'https://bt.rozetka.com.ua/ua/443349854/p443349854/', 'https://s.click.aliexpress.com/e/_onnVLeQ', 'https://ae-pic-a1.aliexpress-media.com/kf/S75201f47a5114f1391b02c10e28dcaa3c.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S2d3f84d4e35f4cdcb33651ff724dddc8N.jpg_220x220q75.jpg" alt="фото" />
+        <p>Жіночий годинник</p>
+        <button onclick="addToFavorites('Жіночий годинник', '6шт Жіночий годинник Розкішний елегантний сплавний годинник Кришталевий наручний годинник для жінок Подарунковий кварцовий годинник Сплав страз Браслет Montre', 'посилання1', 'https://s.click.aliexpress.com/e/_oBMN80m', 'https://ae-pic-a1.aliexpress-media.com/kf/S2d3f84d4e35f4cdcb33651ff724dddc8N.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Назва', 'Опис', 'посилання1', 'посилання2', 'фото')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/HTB1rTpDAk9WBuNjSspeq6yz5VXa7.jpg_220x220q75.jpg" alt="фото" />
+        <p>Брендові годинники CURREN</p>
+        <button onclick="addToFavorites('Брендові годинники CURREN', 'Брендові годинники CURREN Чоловічі шкіряні спортивні годинники Чоловічі армійські військові Кварцові наручні годинники Хронограф Чоловічий годинник Relogio Masculino', 'https://bt.rozetka.com.ua/ua/425821281/p425821281/', 'https://s.click.aliexpress.com/e/_omWuVly', 'https://ae-pic-a1.aliexpress-media.com/kf/HTB1rTpDAk9WBuNjSspeq6yz5VXa7.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProductaddToFavorites('Брендові годинники CURREN', 'Брендові годинники CURREN Чоловічі шкіряні спортивні годинники Чоловічі армійські військові Кварцові наручні годинники Хронограф Чоловічий годинник Relogio Masculino', 'https://bt.rozetka.com.ua/ua/425821281/p425821281/', 'https://s.click.aliexpress.com/e/_omWuVly', 'https://ae-pic-a1.aliexpress-media.com/kf/HTB1rTpDAk9WBuNjSspeq6yz5VXa7.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+
+  </div>
+  <script>
+    function addToFavorites(name, description, url, img) {
+      let favorites1 = JSON.parse(localStorage.getItem('favorites1')) || [];
+      if (!favorites1.some(item => item.name === name)) {
+        favorites1.push({ name, description, url, img });
+        localStorage.setItem('favorites1', JSON.stringify(favorites1));
+        alert(`${name} додано до обраного!`);
+      } else {
+        alert(`${name} вже в обраному.`);
+      }
+    }
+
+    function openProduct(name, description, url, img) {
+      localStorage.setItem('selectedProduct', JSON.stringify({ name, description, url, img }));
+      window.location.href = 'product.html';
+    }
+  </script>
+  <script>
+  const currentUser = localStorage.getItem("currentUser");
+  const userNameSpan = document.getElementById("user-name");
+  const loginLink = document.getElementById("login-link");
+  const logoutBtn = document.getElementById("logout-btn");
+
+  if (currentUser) {
+    userNameSpan.textContent = currentUser;
+    loginLink.style.display = "none";
+    logoutBtn.style.display = "inline-block";
+  }
+
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("currentUser");
+    location.reload(); // перезавантажити сторінку
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вхід | CT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="icon5.png">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f6e4c1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container {
+      background: #fff0da;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #8c3b16;
+      text-align: center;
+    }
+    input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #8c3b16;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .register-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .register-link a {
+      color: #8c3b16;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Вхід до акаунту</h2>
+    <input type="text" id="username" placeholder="Ім'я користувача" />
+    <input type="password" id="password" placeholder="Пароль" />
+    <button onclick="login()">Увійти</button>
+    <div id="error-message" class="error"></div>
+    <div class="register-link">Ще не маєте акаунту? <a href="sing in.html">Зареєструватися</a></div>
+  </div>
+
+  <script>
+    const users = JSON.parse(localStorage.getItem("users")) || {
+      "ivan": "12345",
+      "olga": "qwerty",
+      "admin": "adminpass"
+    };
+
+    function login() {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+      const errorMsg = document.getElementById('error-message');
+
+      if (!username || !password) {
+        errorMsg.textContent = 'Будь ласка, заповніть всі поля.';
+        return;
+      }
+
+      if (!users[username]) {
+        errorMsg.textContent = 'Користувача не знайдено.';
+        return;
+      }
+
+      if (users[username] !== password) {
+        errorMsg.textContent = 'Неправильний пароль.';
+        return;
+      }
+
+      localStorage.setItem('currentUser', username);
+      if (!localStorage.getItem(`favorites_${username}`)) {
+        localStorage.setItem(`favorites_${username}`, JSON.stringify([]));
+      }
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

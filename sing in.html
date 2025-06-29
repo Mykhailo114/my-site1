@@ -1,0 +1,91 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Реєстрація | CT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="icon5.png">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f6e4c1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .register-container {
+      background: #fff0da;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #8c3b16;
+      text-align: center;
+    }
+    input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #8c3b16;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <h2>Реєстрація</h2>
+    <input type="text" id="newUsername" placeholder="Введіть ім'я користувача" />
+    <input type="password" id="newPassword" placeholder="Введіть пароль" />
+    <button onclick="register()">Зареєструватися</button>
+    <div id="error-message" class="error"></div>
+  </div>
+
+  <script>
+    function register() {
+      const username = document.getElementById('newUsername').value.trim();
+      const password = document.getElementById('newPassword').value;
+      const errorMsg = document.getElementById('error-message');
+
+      if (!username || !password) {
+        errorMsg.textContent = 'Заповніть усі поля.';
+        return;
+      }
+
+      const users = JSON.parse(localStorage.getItem("users")) || {};
+
+      if (users[username]) {
+        errorMsg.textContent = 'Користувач з таким ім`ям вже існує.';
+        return;
+      }
+
+      users[username] = password;
+      localStorage.setItem("users", JSON.stringify(users));
+      alert("Реєстрація успішна! Тепер увійдіть у свій акаунт.");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

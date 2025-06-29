@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Каталог – CT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="icon5.png">
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f6e4c1; padding: 40px; color: #2c1e13; }
+    h1 { color: #8c3b16; margin-bottom: 30px; }
+    .categories { display: flex; gap: 20px; flex-wrap: wrap; }
+    .cat-card { background: white; border-radius: 12px; padding: 20px; flex: 1 1 200px; text-align: center; }
+    .cat-card a { text-decoration: none; font-weight: 600; color: #8c3b16; font-size: 18px; }
+    header, footer { background-color: #fff0da; 
+      padding: 20px 40px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      border-radius: 8px; }
+    .logo { font-family: 'Montserrat', sans-serif; 
+      font-size: 24px; 
+      font-weight: 700; 
+      color: #8c3b16; }
+    nav a { margin: 0 15px; 
+      text-decoration: none; 
+      color: #2c1e13; 
+      font-weight: 500;
+      border-radius: 8px; }
+    .cta-btn { background: #d9981d; 
+      color: white; 
+      padding: 10px 20px;
+       border-radius: 8px; 
+       text-decoration: none; 
+       font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">CT</div>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+      <a href="favorites.html">Обране</a>
+      <!-- <a href="#" class="cta-btn" style="background:#d9981d; color:#fff; padding:8px 16px; border-radius:6px;">Стати продавцем</a> -->
+    </nav>
+    <div id="user-area" style="text-align: right; padding: 10px;">
+  <span id="user-name"></span>
+  <a href="login.html" id="login-link" style="
+  margin-left: 10px;
+  ">Увійти</a>
+  <button id="logout-btn" style="
+  display:none; 
+  margin-left: 10px; 
+  background:#8c3b16; 
+  color:white; 
+  border:none; 
+  padding:5px 10px; 
+  border-radius:6px; 
+  cursor:pointer;
+  ">Вийти</button>
+</div>
+  </header>
+
+  <h1>Категорії товарів</h1>
+  <div class="categories">
+    <div class="cat-card"><a href="cloths.html">Одяг</a></div>
+    <div class="cat-card"><a href="headphones.html">Навушники</a></div>
+    <div class="cat-card"><a href="home.html">Для дому</a></div>
+    <div class="cat-card"><a href="sport.html">Для спорту</a></div>
+    <div class="cat-card"><a href="jewwelleres.html">Ювелірні вироби</a></div>
+    <div class="cat-card"><a href="toys.html">Іграшки</a></div>
+    <div class="cat-card"><a href="fishing.html">Риболовля</a></div>
+    <div class="cat-card"><a href="clocks.html">Годинники</a></div>
+  </div>
+  <script>
+  const currentUser = localStorage.getItem("currentUser");
+  const userNameSpan = document.getElementById("user-name");
+  const loginLink = document.getElementById("login-link");
+  const logoutBtn = document.getElementById("logout-btn");
+
+  if (currentUser) {
+    userNameSpan.textContent = currentUser;
+    loginLink.style.display = "none";
+    logoutBtn.style.display = "inline-block";
+  }
+
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("currentUser");
+    location.reload(); // перезавантажити сторінку
+  });
+</script>
+</body>
+</html>

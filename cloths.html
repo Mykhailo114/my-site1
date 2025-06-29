@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навушники – CT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="icon5.png">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background-color: #f6e4c1; padding: 20px; }
+    h1 { font-size: 28px; margin-bottom: 20px; color: #8c3b16; }
+    .grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .card { background: white; border-radius: 12px; padding: 20px; width: 200px; text-align: center; }
+    .card img { width: 100%; height: auto; border-radius: 8px; }
+    .card button { margin-top: 10px; display: block; text-decoration: none; border: none; background: #8c3b16; color: white; padding: 8px; border-radius: 6px; cursor: pointer; }
+
+    .card a { margin-top: 10px; display: block; text-decoration: none; border: none; background: #8c3b16; color: white; border-radius: 6px; cursor: pointer; align: center;}
+    header, footer { background-color: #fff0da; 
+      padding: 20px 40px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      border-radius: 8px; }
+    .logo { font-family: 'Montserrat', sans-serif; 
+      font-size: 24px; 
+      font-weight: 700; 
+      color: #8c3b16; }
+    nav a { margin: 0 15px; 
+      text-decoration: none; 
+      color: #2c1e13; 
+      font-weight: 500;
+      border-radius: 8px; }
+    .cta-btn { background: #d9981d; 
+      color: white; 
+      padding: 10px 20px;
+       border-radius: 8px; 
+       text-decoration: none; 
+       font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">CT</div>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+      <a href="favorites.html">Обране</a>
+  
+      
+    </nav>
+    <div id="user-area" style="text-align: right; padding: 10px;">
+  <span id="user-name"></span>
+  <a href="login.html" id="login-link" style="
+  margin-left: 10px;
+  ">Увійти</a>
+  <button id="logout-btn" style="
+  display:none; 
+  margin-left: 10px; 
+  background:#8c3b16; 
+  color:white; 
+  border:none; 
+  padding:5px 10px; 
+  border-radius:6px; 
+  cursor:pointer;
+  ">Вийти</button>
+</div>
+  </header>
+  <br>
+  <h1>Одяг</h1>
+  <br>
+  <div class="grid">
+
+    <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S205d554d097c422391f3808ef6bb5e35E.jpg_220x220q75.jpg" alt="фото" />
+        <p>Модний світшот</p>
+        <button onclick="addToFavorites('Модний світшот', '2024 Нова повсякденна повсякденна сорочка з флісом з капюшоном з кількома кишенями для чоловіків і жінок плюс розмір вільний пуловер модний світшот верх', 'https://rozetka.com.ua/ua/358629921/p358629921/', 'https://s.click.aliexpress.com/e/_oCsbk60', 'https://ae-pic-a1.aliexpress-media.com/kf/S205d554d097c422391f3808ef6bb5e35E.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Модний світшот', '2024 Нова повсякденна повсякденна сорочка з флісом з капюшоном з кількома кишенями для чоловіків і жінок плюс розмір вільний пуловер модний світшот верх', 'https://rozetka.com.ua/ua/358629921/p358629921/', 'https://s.click.aliexpress.com/e/_oCsbk60', 'https://ae-pic-a1.aliexpress-media.com/kf/S205d554d097c422391f3808ef6bb5e35E.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+    <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S899727303ec04399bdee26a59c201b0cY.jpg_220x220q75.jpg" alt="фото" />
+        <p>Модні Флісові Короткі Жіночі Худі</p>
+        <button onclick="addToFavorites('Модні Флісові Короткі Жіночі Худі', 'Весна Осінь 2025 Новинки Модні Флісові Короткі Жіночі Худі Блискавка Теплий Темно-Синій Повсякденний Повсякденний Топ Стрітодягу', 'https://rozetka.com.ua/ua/356662131/p356662131/', 'https://www.aliexpress.com/ssr/300000512/BundleDeals2?spm=a2g0o.productlist.main.3.96c14a7a2fBESs&productIds=1005007691983066:12000041865324599&pha_manifest=ssr&_immersiveMode=true&disableNav=YES&sourceName=SEARCHProduct&utparam-url=scene%3Asearch%7Cquery_from%3A', 'https://ae-pic-a1.aliexpress-media.com/kf/S899727303ec04399bdee26a59c201b0cY.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Модні Флісові Короткі Жіночі Худі', 'Весна Осінь 2025 Новинки Модні Флісові Короткі Жіночі Худі Блискавка Теплий Темно-Синій Повсякденний Повсякденний Топ Стрітодягу', 'https://rozetka.com.ua/ua/356662131/p356662131/', 'https://www.aliexpress.com/ssr/300000512/BundleDeals2?spm=a2g0o.productlist.main.3.96c14a7a2fBESs&productIds=1005007691983066:12000041865324599&pha_manifest=ssr&_immersiveMode=true&disableNav=YES&sourceName=SEARCHProduct&utparam-url=scene%3Asearch%7Cquery_from%3A', 'https://ae-pic-a1.aliexpress-media.com/kf/S899727303ec04399bdee26a59c201b0cY.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+    <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sf8c46f25b11e4f93a660db42d0ec3042f.jpg_220x220q75.jpg" alt="фото" />
+        <p>Однотонні футболки фітнес Чоловічі</p>
+        <button onclick="addToFavorites('Однотонні футболки фітнес Чоловічі', 'Нова мода Однотонні топи Футболки Фітнес Чоловіча футболка Короткий рукав мязові джоггери Футболка з бодібілдингу Чоловічий одяг для тренажерного залу Приталена сорочка', 'https://rozetka.com.ua/ua/500189654/p500189654/', 'https://s.click.aliexpress.com/e/_opDYZZS', 'https://ae-pic-a1.aliexpress-media.com/kf/Sf8c46f25b11e4f93a660db42d0ec3042f.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Однотонні футболки фітнес Чоловічі', 'Нова мода Однотонні топи Футболки Фітнес Чоловіча футболка Короткий рукав мязові джоггери Футболка з бодібілдингу Чоловічий одяг для тренажерного залу Приталена сорочка', 'https://rozetka.com.ua/ua/500189654/p500189654/', 'https://s.click.aliexpress.com/e/_opDYZZS', 'https://ae-pic-a1.aliexpress-media.com/kf/Sf8c46f25b11e4f93a660db42d0ec3042f.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+    <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S5286b5119ee04de3bd8e65b219c8f3fdJ.jpg_220x220q75.jpg" alt="фото" />
+        <p>Американський стиль Ретро Футболка</p>
+        <button onclick="addToFavorites('Американський стиль Ретро Футболка', 'Американський стиль Ретро Важкий Однотонний Футболка з короткими рукавами Чоловіки Жінки Літо Вулиця Модний Випраний Старий Оверсайз одяг', 'https://rozetka.com.ua/ua/futbolka-muzhskaya-zhenskaya-uniseks-seriy-tsvet-amerikanskiy-retro-stil-100-hlopok-oversayz-korotkiy-rukav/g62698359/', 'https://s.click.aliexpress.com/e/_onHTW6s', 'https://ae-pic-a1.aliexpress-media.com/kf/S5286b5119ee04de3bd8e65b219c8f3fdJ.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Американський стиль Ретро Футболка', 'Американський стиль Ретро Важкий Однотонний Футболка з короткими рукавами Чоловіки Жінки Літо Вулиця Модний Випраний Старий Оверсайз одяг', 'https://rozetka.com.ua/ua/futbolka-muzhskaya-zhenskaya-uniseks-seriy-tsvet-amerikanskiy-retro-stil-100-hlopok-oversayz-korotkiy-rukav/g62698359/', 'https://s.click.aliexpress.com/e/_onHTW6s', 'https://ae-pic-a1.aliexpress-media.com/kf/S5286b5119ee04de3bd8e65b219c8f3fdJ.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+    
+    <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S4354f37e78cf43eebe226652db8c5f36q.jpg_220x220q75.jpg" alt="фото" />
+        <p>Термобілизна Топи Чоловіки</p>
+        <button onclick="addToFavorites('Термобілизна Топи Чоловіки', 'Термобілизна Топи Чоловіки Зимовий одяг Термосорочка Осінь Чоловічі зимові колготки Висока горловина Тонка тонка футболка з довгим рукавом вузького крою', 'посилання1', 'https://s.click.aliexpress.com/e/_oDYZj1a', 'https://ae-pic-a1.aliexpress-media.com/kf/S4354f37e78cf43eebe226652db8c5f36q.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Термобілизна Топи Чоловіки', 'Термобілизна Топи Чоловіки Зимовий одяг Термосорочка Осінь Чоловічі зимові колготки Висока горловина Тонка тонка футболка з довгим рукавом вузького крою', 'посилання1', 'https://s.click.aliexpress.com/e/_oDYZj1a', 'https://ae-pic-a1.aliexpress-media.com/kf/S4354f37e78cf43eebe226652db8c5f36q.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+
+  </div>
+  <script>
+    function addToFavorites(name, description, url, img) {
+      let favorites1 = JSON.parse(localStorage.getItem('favorites1')) || [];
+      if (!favorites1.some(item => item.name === name)) {
+        favorites1.push({ name, description, url, img });
+        localStorage.setItem('favorites1', JSON.stringify(favorites1));
+        alert(`${name} додано до обраного!`);
+      } else {
+        alert(`${name} вже в обраному.`);
+      }
+    }
+
+    function openProduct(name, description, url, img) {
+      localStorage.setItem('selectedProduct', JSON.stringify({ name, description, url, img }));
+      window.location.href = 'product.html';
+    }
+  </script>
+  <script>
+  const currentUser = localStorage.getItem("currentUser");
+  const userNameSpan = document.getElementById("user-name");
+  const loginLink = document.getElementById("login-link");
+  const logoutBtn = document.getElementById("logout-btn");
+
+  if (currentUser) {
+    userNameSpan.textContent = currentUser;
+    loginLink.style.display = "none";
+    logoutBtn.style.display = "inline-block";
+  }
+
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("currentUser");
+    location.reload(); // перезавантажити сторінку
+  });
+</script>
+</body>
+</html>

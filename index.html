@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CT Market</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="icon5.png">
+  <style>
+    * { box-sizing: 
+      border-box;
+       margin: 0; 
+       padding: 0; 
+       font-family: 'Inter', sans-serif; }
+    body { background-color: #ffecc5; 
+      color: #2c1e13; 
+      line-height: 1.6; }
+    header, footer { background-color: #fff0da; 
+      padding: 20px 40px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; }
+    .logo { font-family: 'Montserrat', sans-serif; 
+      font-size: 24px; 
+      font-weight: 700; 
+      color: #8c3b16; }
+    nav a { margin: 0 15px; 
+      text-decoration: none; 
+      color: #2c1e13; 
+      font-weight: 500; }
+    .cta-btn { background: #d9981d; 
+      color: white; 
+      padding: 10px 20px;
+       border-radius: 8px; 
+       text-decoration: none; 
+       font-weight: 600; }
+
+    .hero { display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      padding: 60px 40px; 
+      background-color: #fff6e9; }
+    .hero-text h1 { font-family: 'Montserrat', sans-serif; 
+      font-size: 36px; 
+      margin-bottom: 10px; }
+    .hero-text p { font-size: 18px; 
+      margin-bottom: 20px; }
+    .hero-text .catalog-btn { background: #8c3b16; 
+      color: white; 
+      padding: 10px 24px; 
+      border-radius: 8px; 
+      text-decoration: none; }
+
+    .categories, .popular { padding: 40px; 
+      background-color: #ffecc5; }
+    .section-title { font-size: 24px; 
+      margin-bottom: 20px; 
+      font-weight: 600; }
+    .category-grid, .product-grid { display: flex; 
+      gap: 20px; 
+      flex-wrap: wrap; }
+    .category-card, .product-card { background: white; 
+      border-radius: 12px; 
+      padding: 20px;
+      width: 200px; 
+      margin: 3px; 
+      flex: 1 10 200px; 
+      text-align: center;
+      text-decoration: none; }
+    .product-card img { width: 100%;
+    max-width: 100%; 
+      height: auto; 
+      border-radius: 8px; }
+    .product-card button { margin-top: 10px; 
+      background: #8c3b16; 
+      color: white; 
+      border: none; 
+      padding: 10px 16px; 
+      border-radius: 6px; 
+      cursor: pointer;
+    }
+    .category-card-text {
+      text-decoration: none;
+      color: #2c1e13;
+    }
+
+    footer { background: #8c3b16; 
+      color: white; 
+      flex-direction: column; 
+      align-items: flex-start; }
+    footer p { margin-top: 10px; }
+    footer a {
+      text-decoration: none;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">CT</div>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+      <a href="favorites.html">Обране</a>
+      <!-- text-align: center; 
+      background: #d9981d; 
+      color: white; 
+      padding: 1:1:1:1; 
+      padding: 5px 10px;
+      border-radius: 8px; 
+      text-decoration: none; 
+      font-weight: 600;"  -->    
+    </nav>
+    <div id="user-area" style="text-align: right; padding: 10px;">
+  <span id="user-name"></span>
+  <a href="login.html" id="login-link" style="
+  margin-left: 10px;
+  ">Увійти</a>
+  <button id="logout-btn" style="
+  display:none; 
+  margin-left: 10px; 
+  background:#8c3b16; 
+  color:white; 
+  border:none; 
+  padding:5px 10px; 
+  border-radius:6px; 
+  cursor:pointer;
+  ">Вийти</button>
+</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Відкрий для себе CT-Market</h1>
+      
+      <a href="catalog.html" class="catalog-btn">Переглянути каталог</a>
+    </div>
+    
+  </section>
+
+  <section class="categories">
+    <div class="section-title">Категорії</div>
+    <div class="category-grid">
+      <div class="category-card" href=""><a class="category-card-text" href="cloths.html">Одяг</a></div>
+      <div class="category-card" href=""><a class="category-card-text" href="headphones.html">Навушники</a></div>
+      <div class="category-card" href=""><a class="category-card-text" href="for home.html">Для дому</a></div>
+      <div class="category-card" href=""><a class="category-card-text" href="jewwelleres.html">Ювелірні прикраси</a></div>
+      <div class="category-card" href=""><a class="category-card-text" href="toys.html">Іграшки</a></div>
+      <div class="category-card" href=""><a class="category-card-text" href="clocks.html">Годинники</a></div>
+    </div>
+  </section>
+
+  <section class="popular">
+
+    <div class="section-title">Популярні товари</div>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S02a8bbef27c84c27b8ca473c153b7593d.jpg_220x220q75.jpg" alt="фото" />
+        <p>Нові розкішні годинники </p>
+        <button onclick="addToFavorites('Нові розкішні годинники ', 'Нові розкішні годинники для чоловіків Relojes Para Hombre Годинник Повсякденний годинник Кварцові наручні годинники Чоловіки Найкращі подарунки Дешева ціна Relógio Pulso', 'https://bt.rozetka.com.ua/ua/443349848/p443349848/', 'https://s.click.aliexpress.com/e/_olc480W', 'https://ae-pic-a1.aliexpress-media.com/kf/S02a8bbef27c84c27b8ca473c153b7593d.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Нові розкішні годинники ', 'Нові розкішні годинники для чоловіків Relojes Para Hombre Годинник Повсякденний годинник Кварцові наручні годинники Чоловіки Найкращі подарунки Дешева ціна Relógio Pulso', 'https://bt.rozetka.com.ua/ua/443349848/p443349848/', 'https://s.click.aliexpress.com/e/_olc480W', 'https://ae-pic-a1.aliexpress-media.com/kf/S02a8bbef27c84c27b8ca473c153b7593d.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/H7da6ca29cf374883833d43fea03d2079X.jpg_220x220q75.jpg" alt="фото" />
+        <p>Чоловічий діловий годинник</p>
+        <button onclick="addToFavorites('Чоловічий діловий годинник', 'CURREN Новий чоловічий діловий годинник Повністю сталевий кварц Преміум бренд Розкішний спортивний водонепроникний повсякденний чоловічий наручний годинник Relogio Masculino', 'https://bt.rozetka.com.ua/ua/520096354/p520096354/', 'https://s.click.aliexpress.com/e/_ooxOfbg', 'https://ae-pic-a1.aliexpress-media.com/kf/H7da6ca29cf374883833d43fea03d2079X.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Чоловічий діловий годинник', 'CURREN Новий чоловічий діловий годинник Повністю сталевий кварц Преміум бренд Розкішний спортивний водонепроникний повсякденний чоловічий наручний годинник Relogio Masculino', 'https://bt.rozetka.com.ua/ua/520096354/p520096354/', 'https://s.click.aliexpress.com/e/_ooxOfbg', 'https://ae-pic-a1.aliexpress-media.com/kf/H7da6ca29cf374883833d43fea03d2079X.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S75201f47a5114f1391b02c10e28dcaa3c.jpg_220x220q75.jpg" alt="фото" />
+        <p>Годинники для чоловіків</p>
+        <button onclick="addToFavorites('Годинники для чоловіків', '2024 Годинники для чоловіків Розкішні годинники Повсякденні годинники Кварцові наручні годинники для чоловіків Найкращі подарунки Дешева ціна Relojes para hombre Relógio Pulso', 'https://bt.rozetka.com.ua/ua/443349854/p443349854/', 'https://s.click.aliexpress.com/e/_onnVLeQ', 'https://ae-pic-a1.aliexpress-media.com/kf/S75201f47a5114f1391b02c10e28dcaa3c.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Годинники для чоловіків', '2024 Годинники для чоловіків Розкішні годинники Повсякденні годинники Кварцові наручні годинники для чоловіків Найкращі подарунки Дешева ціна Relojes para hombre Relógio Pulso', 'https://bt.rozetka.com.ua/ua/443349854/p443349854/', 'https://s.click.aliexpress.com/e/_onnVLeQ', 'https://ae-pic-a1.aliexpress-media.com/kf/S75201f47a5114f1391b02c10e28dcaa3c.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S2d3f84d4e35f4cdcb33651ff724dddc8N.jpg_220x220q75.jpg" alt="фото" />
+        <p>Жіночий годинник</p>
+        <button onclick="addToFavorites('Жіночий годинник', '6шт Жіночий годинник Розкішний елегантний сплавний годинник Кришталевий наручний годинник для жінок Подарунковий кварцовий годинник Сплав страз Браслет Montre', 'посилання1', 'https://s.click.aliexpress.com/e/_oBMN80m', 'https://ae-pic-a1.aliexpress-media.com/kf/S2d3f84d4e35f4cdcb33651ff724dddc8N.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Назва', 'Опис', 'посилання1', 'посилання2', 'фото')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/HTB1rTpDAk9WBuNjSspeq6yz5VXa7.jpg_220x220q75.jpg" alt="фото" />
+        <p>Брендові годинники CURREN</p>
+        <button onclick="addToFavorites('Брендові годинники CURREN', 'Брендові годинники CURREN Чоловічі шкіряні спортивні годинники Чоловічі армійські військові Кварцові наручні годинники Хронограф Чоловічий годинник Relogio Masculino', 'https://bt.rozetka.com.ua/ua/425821281/p425821281/', 'https://s.click.aliexpress.com/e/_omWuVly', 'https://ae-pic-a1.aliexpress-media.com/kf/HTB1rTpDAk9WBuNjSspeq6yz5VXa7.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProductaddToFavorites('Брендові годинники CURREN', 'Брендові годинники CURREN Чоловічі шкіряні спортивні годинники Чоловічі армійські військові Кварцові наручні годинники Хронограф Чоловічий годинник Relogio Masculino', 'https://bt.rozetka.com.ua/ua/425821281/p425821281/', 'https://s.click.aliexpress.com/e/_omWuVly', 'https://ae-pic-a1.aliexpress-media.com/kf/HTB1rTpDAk9WBuNjSspeq6yz5VXa7.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sc4cddb33cb4249e1bd8f2a2cfd85d2ebZ.jpg_220x220q75.jpg" alt="фото" />
+        <p>Плюшева іграшка</p>
+        <button onclick="addToFavorites('Плюшева іграшка', '20 см Лісові стоячі тварини Плюшева іграшка Милий Жираф/Лев/Лисиця/Тигр Подарунок на день народження Kids Baby Ate Appease Dolls Домашній декор', 'https://rozetka.com.ua/ua/439481312/p439481312/', 'https://s.click.aliexpress.com/e/_omZEAdY', 'https://ae-pic-a1.aliexpress-media.com/kf/Sc4cddb33cb4249e1bd8f2a2cfd85d2ebZ.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Плюшева іграшка', '20 см Лісові стоячі тварини Плюшева іграшка Милий Жираф/Лев/Лисиця/Тигр Подарунок на день народження Kids Baby Ate Appease Dolls Домашній декор', 'https://rozetka.com.ua/ua/439481312/p439481312/', 'https://s.click.aliexpress.com/e/_omZEAdY', 'https://ae-pic-a1.aliexpress-media.com/kf/Sc4cddb33cb4249e1bd8f2a2cfd85d2ebZ.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S489be2aa5d8f4fdda69e837e69ffba0fq.jpg_220x220q75.jpg" alt="фото" />
+        <p>Парашутні іграшки для дітей </p>
+        <button onclick="addToFavorites('Парашутні іграшки для дітей ', 'Парашутні іграшки для дітей Tangle Free Літаючі парашути на відкритому повітрі Чоловіки на вулиці Іграшки Великодній кошик Наповнювачі Ідея Унікальний подарунок хлопчику та дівчинці', 'https://rozetka.com.ua/ua/420329274/p420329274/', 'https://s.click.aliexpress.com/e/_oEgVElg', 'https://ae-pic-a1.aliexpress-media.com/kf/S489be2aa5d8f4fdda69e837e69ffba0fq.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Парашутні іграшки для дітей ', 'Парашутні іграшки для дітей Tangle Free Літаючі парашути на відкритому повітрі Чоловіки на вулиці Іграшки Великодній кошик Наповнювачі Ідея Унікальний подарунок хлопчику та дівчинці', 'https://rozetka.com.ua/ua/420329274/p420329274/', 'https://s.click.aliexpress.com/e/_oEgVElg', 'https://ae-pic-a1.aliexpress-media.com/kf/S489be2aa5d8f4fdda69e837e69ffba0fq.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sdcf2c381c160474a9fd0a2a8cdb048ebw.jpg_220x220q75.jpg" alt="фото" />
+        <p>Футбольний м'яч</p>
+        <button onclick="addToFavorites('Футбольний мяч', 'Hover Футбольний мяч Іграшки для дітей Електричний плаваючий футбольний мяч зі світлодіодною світловою музикою Футбольний мяч Рухливі ігри Спортивні іграшки для дітей', 'https://rozetka.com.ua/ua/426790871/p426790871/', 'https://www.aliexpress.com/item/1005005721275758.html?spm=a2g0o.productlist.main.33.2f5a256dpCVgW2&utparam-url=scene%3Asearch%7Cquery_from%3Apc_back_same_best&algo_pvid=3f991e85-5280-4825-855c-fc99dd2dbb86&algo_exp_id=3f991e85-5280-4825-855c-fc99dd2dbb86&pdp_ext_f=%7B%22order%22%3A%222830%22%7D&pdp_npi=4%40dis%21UAH%21162.56%2173.82%21%21%213.81%211.73%21%40210388c917508516711474891e9784%2112000040254159948%21sea%21UA%216333419212%21ABX', 'https://ae-pic-a1.aliexpress-media.com/kf/Sdcf2c381c160474a9fd0a2a8cdb048ebw.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Футбольний мяч', 'Hover Футбольний мяч Іграшки для дітей Електричний плаваючий футбольний мяч зі світлодіодною світловою музикою Футбольний мяч Рухливі ігри Спортивні іграшки для дітей', 'https://rozetka.com.ua/ua/426790871/p426790871/', 'https://www.aliexpress.com/item/1005005721275758.html?spm=a2g0o.productlist.main.33.2f5a256dpCVgW2&utparam-url=scene%3Asearch%7Cquery_from%3Apc_back_same_best&algo_pvid=3f991e85-5280-4825-855c-fc99dd2dbb86&algo_exp_id=3f991e85-5280-4825-855c-fc99dd2dbb86&pdp_ext_f=%7B%22order%22%3A%222830%22%7D&pdp_npi=4%40dis%21UAH%21162.56%2173.82%21%21%213.81%211.73%21%40210388c917508516711474891e9784%2112000040254159948%21sea%21UA%216333419212%21ABX', 'https://ae-pic-a1.aliexpress-media.com/kf/Sdcf2c381c160474a9fd0a2a8cdb048ebw.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S1978edc01f8241eab487ffc8a85207847.jpg_220x220q75.jpg" alt="фото" />
+        <p>Веселі фізкультурні іграшк</p>
+        <button onclick="addToFavorites('веселі фізкультурні іграшк', 'Нові дитячі веселі фізкультурні іграшки для занять спортом Гратчастий набір кілець для стрибків 10 обручів 10 зєднувачів для парку грати хлопчики дівчатка', 'посилання1', 'https://www.aliexpress.com/item/1005005906343366.html?spm=a2g0o.productlist.main.31.2f5a256dpCVgW2&utparam-url=scene%3Asearch%7Cquery_from%3Apc_back_same_best&algo_pvid=f2b5d862-58d6-4d94-96b0-31aa4150167f&algo_exp_id=f2b5d862-58d6-4d94-96b0-31aa4150167f&pdp_ext_f=%7B%22order%22%3A%226405%22%7D&pdp_npi=4%40dis%21UAH%2171.25%2149.92%21%21%211.67%211.17%21%40210384cc17508513994246899ec887%2112000045394730746%21sea%21UA%216333419212%21ABX', 'https://ae-pic-a1.aliexpress-media.com/kf/S1978edc01f8241eab487ffc8a85207847.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('веселі фізкультурні іграшк', 'Нові дитячі веселі фізкультурні іграшки для занять спортом Гратчастий набір кілець для стрибків 10 обручів 10 зєднувачів для парку грати хлопчики дівчатка', 'посилання1', 'https://www.aliexpress.com/item/1005005906343366.html?spm=a2g0o.productlist.main.31.2f5a256dpCVgW2&utparam-url=scene%3Asearch%7Cquery_from%3Apc_back_same_best&algo_pvid=f2b5d862-58d6-4d94-96b0-31aa4150167f&algo_exp_id=f2b5d862-58d6-4d94-96b0-31aa4150167f&pdp_ext_f=%7B%22order%22%3A%226405%22%7D&pdp_npi=4%40dis%21UAH%2171.25%2149.92%21%21%211.67%211.17%21%40210384cc17508513994246899ec887%2112000045394730746%21sea%21UA%216333419212%21ABX', 'https://ae-pic-a1.aliexpress-media.com/kf/S1978edc01f8241eab487ffc8a85207847.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S754f8de1ed90447c8a4813e68a6a90b3N.jpg_220x220q75.jpg" alt="фото" />
+        <p>Дитячий бумеранг</p>
+        <button onclick="addToFavorites('Дитячий бумеранг', 'Дитячий бумеранг мякий Трилистий Хрест Доросло-дитячий Інтерактивна іграшка на свіжому повітрі Раннє навчання Головоломка Декомпресія Подарунок', 'https://rozetka.com.ua/ua/493381404/p493381404/', 'https://s.click.aliexpress.com/e/_om1iRZM', 'https://ae-pic-a1.aliexpress-media.com/kf/S754f8de1ed90447c8a4813e68a6a90b3N.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Дитячий бумеранг', 'Дитячий бумеранг мякий Трилистий Хрест Доросло-дитячий Інтерактивна іграшка на свіжому повітрі Раннє навчання Головоломка Декомпресія Подарунок', 'https://rozetka.com.ua/ua/493381404/p493381404/', 'https://s.click.aliexpress.com/e/_om1iRZM', 'https://ae-pic-a1.aliexpress-media.com/kf/S754f8de1ed90447c8a4813e68a6a90b3N.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sc10d058b5592441281c9f094fea0fa53V.jpg_220x220q75.jpg" alt="фото" />
+        <p>Базовий панк </p>
+        <button onclick="addToFavorites('Базовий панк ', 'Базовий панк з нержавіючої сталі 3,5,7 мм бордюрні кубинські намиста для чоловіків жінки з чорним золотом кольорові ланцюжки чокери суцільні металеві прикраси', 'https://rozetka.com.ua/ua/455319574/p455319574/', 'https://s.click.aliexpress.com/e/_opjRK0e', 'https://ae-pic-a1.aliexpress-media.com/kf/Sc10d058b5592441281c9f094fea0fa53V.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Назва', 'Опис', 'посилання1', 'посилання2', 'фото')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S45706d5bef0e4328b540e6467884d7eb3.jpeg_220x220q75.jpeg" alt="фото" />
+        <p> Французький набір жіночих браслетів</p>
+        <button onclick="addToFavorites(' Французький набір жіночих браслетів', '3шт Французький набір жіночих браслетів Lucky Clover Високоякісний браслет з нержавіючої сталі INS Гарячий продаж ювелірних виробів Charm Feeling Ювелірний подарунок', 'https://rozetka.com.ua/ua/475333624/p475333624/', 'https://s.click.aliexpress.com/e/_oCVrki2', 'https://ae-pic-a1.aliexpress-media.com/kf/S45706d5bef0e4328b540e6467884d7eb3.jpeg_220x220q75.jpeg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Назва', 'Опис', 'посилання1', 'посилання2', 'фото')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Se7a2490f8e454fc4bd10d3d04f680ec6G.jpg_220x220q75.jpg" alt="фото" />
+        <p>Чорний силіконовий браслет</p>
+        <button onclick="addToFavorites('Чорний силіконовий браслет', 'Християнська Біблія Текст молитви Хрест Манжета з нержавіючої сталі Браслет Чорний силіконовий браслет Жінки Чоловіки Пара Ювелірні вироби Подарунки', 'посилання1', 'https://s.click.aliexpress.com/e/_ok7GTQe', 'https://ae-pic-a1.aliexpress-media.com/kf/Se7a2490f8e454fc4bd10d3d04f680ec6G.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Чорний силіконовий браслет', 'Християнська Біблія Текст молитви Хрест Манжета з нержавіючої сталі Браслет Чорний силіконовий браслет Жінки Чоловіки Пара Ювелірні вироби Подарунки', 'посилання1', 'https://s.click.aliexpress.com/e/_ok7GTQe', 'https://ae-pic-a1.aliexpress-media.com/kf/Se7a2490f8e454fc4bd10d3d04f680ec6G.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sd8ceb4dc447e4f35a1cd0436cdaec3c23.png_220x220.png" alt="фото" />
+        <p>Пляжний набір анклетів </p>
+        <button onclick="addToFavorites('Пляжний набір анклетів', '3 шт Пляжний набір анклетів з бісеру для жінок вінтажний літній золотий колір Морська зірка Панцир Чари Анклет Відпустка Щоденне носіння ювелірних виробів Подарунки', 'https://rozetka.com.ua/ua/497912204/p497912204/', 'https://s.click.aliexpress.com/e/_opRWfJs', 'https://ae-pic-a1.aliexpress-media.com/kf/Sd8ceb4dc447e4f35a1cd0436cdaec3c23.png_220x220.png')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Пляжний набір анклетів', '3 шт Пляжний набір анклетів з бісеру для жінок вінтажний літній золотий колір Морська зірка Панцир Чари Анклет Відпустка Щоденне носіння ювелірних виробів Подарунки', 'https://rozetka.com.ua/ua/497912204/p497912204/', 'https://s.click.aliexpress.com/e/_opRWfJs', 'https://ae-pic-a1.aliexpress-media.com/kf/Sd8ceb4dc447e4f35a1cd0436cdaec3c23.png_220x220.png')"><button>Переглянути</button></a>
+      </div>
+
+       
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Scf2e05e2e585486c8430e7126244bc55E.jpg_220x220q75.jpg" alt="фото" />
+        <p>Затискач для носа</p>
+        <button onclick="addToFavorites('Затискач для носа', 'Жінки Чоловіки Підроблені сережки з кільцем для носа Модний панк Непірсинг Затискач для носа Перфорація з нержавіючої сталі Перегородка Боді Прикраси', 'https://rozetka.com.ua/ua/483344539/p483344539/', 'https://s.click.aliexpress.com/e/_onjIUjc', 'https://ae-pic-a1.aliexpress-media.com/kf/Scf2e05e2e585486c8430e7126244bc55E.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Затискач для носа', 'Жінки Чоловіки Підроблені сережки з кільцем для носа Модний панк Непірсинг Затискач для носа Перфорація з нержавіючої сталі Перегородка Боді Прикраси', 'https://rozetka.com.ua/ua/483344539/p483344539/', 'https://s.click.aliexpress.com/e/_onjIUjc', 'https://ae-pic-a1.aliexpress-media.com/kf/Scf2e05e2e585486c8430e7126244bc55E.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S28eca0528f604afb9ff7acd085d9f5d8O.jpg_220x220q75.jpg" alt="фото" />
+        <p>Місячне світло</p>
+        <button onclick="addToFavorites('Місячне світло', 'Дитячий день Ручний розпис Місячне світло Упаковка з фарбованих матеріалів своїми руками Дитячий садок Заняття для батьків і дітей Планета Нічник', 'https://rozetka.com.ua/ua/347858931/p347858931/', 'https://s.click.aliexpress.com/e/_oELwBIe', 'https://ae-pic-a1.aliexpress-media.com/kf/S28eca0528f604afb9ff7acd085d9f5d8O.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Місячне світло', 'Дитячий день Ручний розпис Місячне світло Упаковка з фарбованих матеріалів своїми руками Дитячий садок Заняття для батьків і дітей Планета Нічник', 'https://rozetka.com.ua/ua/347858931/p347858931/', 'https://s.click.aliexpress.com/e/_oELwBIe', 'https://ae-pic-a1.aliexpress-media.com/kf/S28eca0528f604afb9ff7acd085d9f5d8O.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S44e1591ae28d41d7bbb40920a0624972Y.jpg_220x220q75.jpg" alt="фото" />
+        <p>Акумуляторний індукційний нічник</p>
+        <button onclick="addToFavorites('Акумуляторний індукційний нічник', 'Датчик руху Світлодіодне освітлення шафи Акумуляторний індукційний нічник Бездротовий портативний детектор Лампа Кухня Підсвічування сходів', 'https://rozetka.com.ua/ua/451215719/p451215719/', 'https://s.click.aliexpress.com/e/_oE8dFKW', 'https://ae-pic-a1.aliexpress-media.com/kf/S44e1591ae28d41d7bbb40920a0624972Y.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Акумуляторний індукційний нічник', 'Датчик руху Світлодіодне освітлення шафи Акумуляторний індукційний нічник Бездротовий портативний детектор Лампа Кухня Підсвічування сходів', 'https://rozetka.com.ua/ua/451215719/p451215719/', 'https://s.click.aliexpress.com/e/_oE8dFKW', 'https://ae-pic-a1.aliexpress-media.com/kf/S44e1591ae28d41d7bbb40920a0624972Y.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sb07878b067d948f481f776c1d188026dB.png_220x220.png" alt="фото" />
+        <p>Складний і портативний чайник 600 мл</p>
+        <button onclick="addToFavorites('Складний і портативний чайник 600 мл', 'Складний і портативний чайник 600 мл Водонагрівач Побутовий туристичний електричний чайник для води Кухонна техніка Каструля для кипятіння води', 'https://bt.rozetka.com.ua/ua/426400050/p426400050/', 'https://s.click.aliexpress.com/e/_onOzOLe', 'https://ae-pic-a1.aliexpress-media.com/kf/Sb07878b067d948f481f776c1d188026dB.png_220x220.png')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Складний і портативний чайник 600 мл', 'Складний і портативний чайник 600 мл Водонагрівач Побутовий туристичний електричний чайник для води Кухонна техніка Каструля для кипятіння води', 'https://bt.rozetka.com.ua/ua/426400050/p426400050/', 'https://s.click.aliexpress.com/e/_onOzOLe', 'https://ae-pic-a1.aliexpress-media.com/kf/Sb07878b067d948f481f776c1d188026dB.png_220x220.png')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S7cd619e7a88c4f7a90826c70b7a07b737.jpg_220x220q75.jpg" alt="фото" />
+        <p>Водяний насос</p>
+        <button onclick="addToFavorites('Водяний насос', 'Водяний насос Пляшка Автоматичний електричний диспенсер для води Побутовий галонний перемикач для пиття Автоматичні розумні прилади для очищення води', 'https://bt.rozetka.com.ua/ua/automatice_water_dispenser_usb_5680-0001/p226231969/', 'https://s.click.aliexpress.com/e/_opWmQyo', 'https://ae-pic-a1.aliexpress-media.com/kf/S7cd619e7a88c4f7a90826c70b7a07b737.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Водяний насос', 'Водяний насос Пляшка Автоматичний електричний диспенсер для води Побутовий галонний перемикач для пиття Автоматичні розумні прилади для очищення води', 'https://bt.rozetka.com.ua/ua/automatice_water_dispenser_usb_5680-0001/p226231969/', 'https://s.click.aliexpress.com/e/_opWmQyo', 'https://ae-pic-a1.aliexpress-media.com/kf/S7cd619e7a88c4f7a90826c70b7a07b737.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S6d0712a20fd447f38b3448acff90381az.jpg_220x220q75.jpg" alt="фото" />
+        <p>SZUK C012MAX Автомобільний пилосос </p>
+        <button onclick="addToFavorites('SZUK C012MAX Автомобільний пилосос ', 'SZUK C012MAX Автомобільний пилосос Міні-машина з сильним всмоктуванням Бездротова портативна повітродувка Побутова техніка', 'https://rozetka.com.ua/ua/389491830/p389491830/?advToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTA2MTg4MjAsInBheWxvYWQiOiJ7XCJwZ1wiOjI4NTkxNzAwLFwiY1wiOjM0MDQ1LFwiY3RcIjoxLFwiY3BjXCI6MSxcInNjXCI6NyxcInBsXCI6MyxcImNpZFwiOjQ2MzEyNjMsXCJwXCI6MTQsXCJnXCI6MX0ifQ.Z1DQMe9sr0SSbItj1UY2Y9VROHHSgaHLvqXM-E-N5hA&advSource=catalog', 'https://s.click.aliexpress.com/e/_okS9RS4', 'https://ae-pic-a1.aliexpress-media.com/kf/S6d0712a20fd447f38b3448acff90381az.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('SZUK C012MAX Автомобільний пилосос ', 'SZUK C012MAX Автомобільний пилосос Міні-машина з сильним всмоктуванням Бездротова портативна повітродувка Побутова техніка', 'https://rozetka.com.ua/ua/389491830/p389491830/?advToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTA2MTg4MjAsInBheWxvYWQiOiJ7XCJwZ1wiOjI4NTkxNzAwLFwiY1wiOjM0MDQ1LFwiY3RcIjoxLFwiY3BjXCI6MSxcInNjXCI6NyxcInBsXCI6MyxcImNpZFwiOjQ2MzEyNjMsXCJwXCI6MTQsXCJnXCI6MX0ifQ.Z1DQMe9sr0SSbItj1UY2Y9VROHHSgaHLvqXM-E-N5hA&advSource=catalog', 'https://s.click.aliexpress.com/e/_okS9RS4', 'https://ae-pic-a1.aliexpress-media.com/kf/S6d0712a20fd447f38b3448acff90381az.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S205d554d097c422391f3808ef6bb5e35E.jpg_220x220q75.jpg" alt="фото" />
+        <p>Модний світшот</p>
+        <button onclick="addToFavorites('Модний світшот', '2024 Нова повсякденна повсякденна сорочка з флісом з капюшоном з кількома кишенями для чоловіків і жінок плюс розмір вільний пуловер модний світшот верх', 'https://rozetka.com.ua/ua/358629921/p358629921/', 'https://s.click.aliexpress.com/e/_oCsbk60', 'https://ae-pic-a1.aliexpress-media.com/kf/S205d554d097c422391f3808ef6bb5e35E.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Модний світшот', '2024 Нова повсякденна повсякденна сорочка з флісом з капюшоном з кількома кишенями для чоловіків і жінок плюс розмір вільний пуловер модний світшот верх', 'https://rozetka.com.ua/ua/358629921/p358629921/', 'https://s.click.aliexpress.com/e/_oCsbk60', 'https://ae-pic-a1.aliexpress-media.com/kf/S205d554d097c422391f3808ef6bb5e35E.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S899727303ec04399bdee26a59c201b0cY.jpg_220x220q75.jpg" alt="фото" />
+        <p>Модні Флісові Короткі Жіночі Худі</p>
+        <button onclick="addToFavorites('Модні Флісові Короткі Жіночі Худі', 'Весна Осінь 2025 Новинки Модні Флісові Короткі Жіночі Худі Блискавка Теплий Темно-Синій Повсякденний Повсякденний Топ Стрітодягу', 'https://rozetka.com.ua/ua/356662131/p356662131/', 'https://www.aliexpress.com/ssr/300000512/BundleDeals2?spm=a2g0o.productlist.main.3.96c14a7a2fBESs&productIds=1005007691983066:12000041865324599&pha_manifest=ssr&_immersiveMode=true&disableNav=YES&sourceName=SEARCHProduct&utparam-url=scene%3Asearch%7Cquery_from%3A', 'https://ae-pic-a1.aliexpress-media.com/kf/S899727303ec04399bdee26a59c201b0cY.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Модні Флісові Короткі Жіночі Худі', 'Весна Осінь 2025 Новинки Модні Флісові Короткі Жіночі Худі Блискавка Теплий Темно-Синій Повсякденний Повсякденний Топ Стрітодягу', 'https://rozetka.com.ua/ua/356662131/p356662131/', 'https://www.aliexpress.com/ssr/300000512/BundleDeals2?spm=a2g0o.productlist.main.3.96c14a7a2fBESs&productIds=1005007691983066:12000041865324599&pha_manifest=ssr&_immersiveMode=true&disableNav=YES&sourceName=SEARCHProduct&utparam-url=scene%3Asearch%7Cquery_from%3A', 'https://ae-pic-a1.aliexpress-media.com/kf/S899727303ec04399bdee26a59c201b0cY.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sf8c46f25b11e4f93a660db42d0ec3042f.jpg_220x220q75.jpg" alt="фото" />
+        <p>Однотонні футболки фітнес Чоловічі</p>
+        <button onclick="addToFavorites('Однотонні футболки фітнес Чоловічі', 'Нова мода Однотонні топи Футболки Фітнес Чоловіча футболка Короткий рукав мязові джоггери Футболка з бодібілдингу Чоловічий одяг для тренажерного залу Приталена сорочка', 'https://rozetka.com.ua/ua/500189654/p500189654/', 'https://s.click.aliexpress.com/e/_opDYZZS', 'https://ae-pic-a1.aliexpress-media.com/kf/Sf8c46f25b11e4f93a660db42d0ec3042f.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Однотонні футболки фітнес Чоловічі', 'Нова мода Однотонні топи Футболки Фітнес Чоловіча футболка Короткий рукав мязові джоггери Футболка з бодібілдингу Чоловічий одяг для тренажерного залу Приталена сорочка', 'https://rozetka.com.ua/ua/500189654/p500189654/', 'https://s.click.aliexpress.com/e/_opDYZZS', 'https://ae-pic-a1.aliexpress-media.com/kf/Sf8c46f25b11e4f93a660db42d0ec3042f.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S5286b5119ee04de3bd8e65b219c8f3fdJ.jpg_220x220q75.jpg" alt="фото" />
+        <p>Американський стиль Ретро Футболка</p>
+        <button onclick="addToFavorites('Американський стиль Ретро Футболка', 'Американський стиль Ретро Важкий Однотонний Футболка з короткими рукавами Чоловіки Жінки Літо Вулиця Модний Випраний Старий Оверсайз одяг', 'https://rozetka.com.ua/ua/futbolka-muzhskaya-zhenskaya-uniseks-seriy-tsvet-amerikanskiy-retro-stil-100-hlopok-oversayz-korotkiy-rukav/g62698359/', 'https://s.click.aliexpress.com/e/_onHTW6s', 'https://ae-pic-a1.aliexpress-media.com/kf/S5286b5119ee04de3bd8e65b219c8f3fdJ.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Американський стиль Ретро Футболка', 'Американський стиль Ретро Важкий Однотонний Футболка з короткими рукавами Чоловіки Жінки Літо Вулиця Модний Випраний Старий Оверсайз одяг', 'https://rozetka.com.ua/ua/futbolka-muzhskaya-zhenskaya-uniseks-seriy-tsvet-amerikanskiy-retro-stil-100-hlopok-oversayz-korotkiy-rukav/g62698359/', 'https://s.click.aliexpress.com/e/_onHTW6s', 'https://ae-pic-a1.aliexpress-media.com/kf/S5286b5119ee04de3bd8e65b219c8f3fdJ.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S4354f37e78cf43eebe226652db8c5f36q.jpg_220x220q75.jpg" alt="фото" />
+        <p>Термобілизна Топи Чоловіки</p>
+        <button onclick="addToFavorites('Термобілизна Топи Чоловіки', 'Термобілизна Топи Чоловіки Зимовий одяг Термосорочка Осінь Чоловічі зимові колготки Висока горловина Тонка тонка футболка з довгим рукавом вузького крою', 'посилання1', 'https://s.click.aliexpress.com/e/_oDYZj1a', 'https://ae-pic-a1.aliexpress-media.com/kf/S4354f37e78cf43eebe226652db8c5f36q.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Термобілизна Топи Чоловіки', 'Термобілизна Топи Чоловіки Зимовий одяг Термосорочка Осінь Чоловічі зимові колготки Висока горловина Тонка тонка футболка з довгим рукавом вузького крою', 'посилання1', 'https://s.click.aliexpress.com/e/_oDYZj1a', 'https://ae-pic-a1.aliexpress-media.com/kf/S4354f37e78cf43eebe226652db8c5f36q.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sd73a83782e1d4fc2944463d25cc74716i.jpg_220x220q75.jpg" alt="фото" />
+        <p>P47 Бездротові навушники</p>
+        <button onclick="addToFavorites('P47 Бездротові навушники', 'P47 Бездротові навушники Bluetooth з мікрофонними гарнітурами Стереозвукові навушники Спортивні ігрові навушники підтримують ПК Смартфон', 'https://rozetka.com.ua/ua/387337425/p387337425/', 'https://s.click.aliexpress.com/e/_onlwh0u', 'https://ae-pic-a1.aliexpress-media.com/kf/Sd73a83782e1d4fc2944463d25cc74716i.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('P47 Бездротові навушники', 'P47 Бездротові навушники Bluetooth з мікрофонними гарнітурами Стереозвукові навушники Спортивні ігрові навушники підтримують ПК Смартфон', 'https://rozetka.com.ua/ua/387337425/p387337425/', 'https://s.click.aliexpress.com/e/_onlwh0u', 'https://ae-pic-a1.aliexpress-media.com/kf/Sd73a83782e1d4fc2944463d25cc74716i.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S852b31dacbf245f9aca6a8e85c34fbacG.jpg_220x220q75.jpg" alt="фото" />
+        <p> Lenovo XT53 </p>
+        <button onclick="addToFavorites(' Lenovo XT53 ', 'Навушники Lenovo XT53 Wireless Upgrade Bluetooth 5.4 Ігрова гарнітура з ультратривалою витривалістю та низькою затримкою Світлодіодні навушники з цифровим дисплеєм', 'https://rozetka.com.ua/ua/469760679/p469760679/', 'https://s.click.aliexpress.com/e/_oktQIPi', 'https://ae-pic-a1.aliexpress-media.com/kf/S852b31dacbf245f9aca6a8e85c34fbacG.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct(' Lenovo XT53 ', 'Навушники Lenovo XT53 Wireless Upgrade Bluetooth 5.4 Ігрова гарнітура з ультратривалою витривалістю та низькою затримкою Світлодіодні навушники з цифровим дисплеєм', 'https://rozetka.com.ua/ua/469760679/p469760679/', 'https://s.click.aliexpress.com/e/_oktQIPi', 'https://ae-pic-a1.aliexpress-media.com/kf/S852b31dacbf245f9aca6a8e85c34fbacG.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S683e6cfea8c247daa71321b42909afb35.jpg_220x220q75.jpg" alt="фото" />
+        <p>Xiaomi A98</p>
+        <button onclick="addToFavorites('Xiaomi A98', 'Бездротова гарнітура Xiaomi A98 з перекладом Bluetooth 5.3 Стерео водонепроникні навушники Вбудований мікрофон Спортивні навушники', 'посилання1', 'https://s.click.aliexpress.com/e/_oEpzw4U', 'https://ae-pic-a1.aliexpress-media.com/kf/S683e6cfea8c247daa71321b42909afb35.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Xiaomi A98', 'Бездротова гарнітура Xiaomi A98 з перекладом Bluetooth 5.3 Стерео водонепроникні навушники Вбудований мікрофон Спортивні навушники', 'посилання1', 'https://s.click.aliexpress.com/e/_oEpzw4U', 'https://ae-pic-a1.aliexpress-media.com/kf/S683e6cfea8c247daa71321b42909afb35.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sec024e2b9ca04ca1bf70404e630a0d5cl.jpg_220x220q75.jpg" alt="фото" />
+        <p> VAORLO Bluetooth 5.2</p>
+        <button onclick="addToFavorites('VAORLO Bluetooth 5.2', 'Бездротові навушники VAORLO Bluetooth 5.2 Business Ear-Hook Mini HIFI Bass з шумозаглушенням і мікрофоном Спортивна ігрова гарнітура', 'посилання1', 'https://s.click.aliexpress.com/e/_oDyQuoM', 'https://ae-pic-a1.aliexpress-media.com/kf/Sec024e2b9ca04ca1bf70404e630a0d5cl.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct(' VAORLO Bluetooth 5.2', 'Бездротові навушники VAORLO Bluetooth 5.2 Business Ear-Hook Mini HIFI Bass з шумозаглушенням і мікрофоном Спортивна ігрова гарнітура', 'посилання1', 'https://s.click.aliexpress.com/e/_oDyQuoM', 'https://ae-pic-a1.aliexpress-media.com/kf/Sec024e2b9ca04ca1bf70404e630a0d5cl.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S8041f89a371c49dca25e2497c6448a998.jpg_220x220q75.jpg" alt="фото" />
+        <p>Bluetooth V8 </p>
+        <button onclick="addToFavorites('Bluetooth V8 ', 'Нові бездротові одиночні навушники Bluetooth V8 з HD мікрофоном Стереогарнітура Handsfree Call Бізнес-навушники для спорту, водіння, подорожей', 'посилання1', 'https://s.click.aliexpress.com/e/_om7rRXW', 'https://ae-pic-a1.aliexpress-media.com/kf/S8041f89a371c49dca25e2497c6448a998.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Bluetooth V8 ', 'Нові бездротові одиночні навушники Bluetooth V8 з HD мікрофоном Стереогарнітура Handsfree Call Бізнес-навушники для спорту, водіння, подорожей', 'посилання1', 'https://s.click.aliexpress.com/e/_om7rRXW', 'https://ae-pic-a1.aliexpress-media.com/kf/S8041f89a371c49dca25e2497c6448a998.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sfdc3a92cba69471bb64c4a72b220272bY.jpg_220x220q75.jpg" alt="фото" />
+        <p>Apple AirPods Pro2 </p>
+        <button onclick="addToFavorites('Apple AirPods Pro2 ', 'Оригінальні бездротові навушники Apple AirPods Pro2 Bluetooth навушники у вухах Tws Gaming Спортивні навушники для смартфонів Air IPhone', 'https://rozetka.com.ua/ua/507439454/p507439454/', 'https://www.aliexpress.com/item/1005008822274950.html?spm=a2g0o.productlist.main.21.4db532e0F5xqff&utparam-url=scene%3Asearch%7Cquery_from%3Apc_back_same_best&algo_pvid=f814004e-99e3-4312-af00-5e41c451c6af&algo_exp_id=f814004e-99e3-4312-af00-5e41c451c6af&pdp_ext_f=%7B%22order%22%3A%22319%22%7D&pdp_npi=4%40dis%21UAH%212752.97%211376.48%21%21%21420.00%21210.00%21%402103985c17505139285772991e1290%2112000048239033969%21sea%21UA%216333419212%21ABX', 'https://ae-pic-a1.aliexpress-media.com/kf/Sfdc3a92cba69471bb64c4a72b220272bY.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Apple AirPods Pro2 ', 'Оригінальні бездротові навушники Apple AirPods Pro2 Bluetooth навушники у вухах Tws Gaming Спортивні навушники для смартфонів Air IPhone', 'https://rozetka.com.ua/ua/507439454/p507439454/', 'https://www.aliexpress.com/item/1005008822274950.html?spm=a2g0o.productlist.main.21.4db532e0F5xqff&utparam-url=scene%3Asearch%7Cquery_from%3Apc_back_same_best&algo_pvid=f814004e-99e3-4312-af00-5e41c451c6af&algo_exp_id=f814004e-99e3-4312-af00-5e41c451c6af&pdp_ext_f=%7B%22order%22%3A%22319%22%7D&pdp_npi=4%40dis%21UAH%212752.97%211376.48%21%21%21420.00%21210.00%21%402103985c17505139285772991e1290%2112000048239033969%21sea%21UA%216333419212%21ABX', 'https://ae-pic-a1.aliexpress-media.com/kf/Sfdc3a92cba69471bb64c4a72b220272bY.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sb38478c9a3784d239f0ca9819d577df3I.jpg_220x220q75.jpg" alt="фото" />
+        <p>Lenovo GM2 Pro</p>
+        <button onclick="addToFavorites('Lenovo GM2 Pro', 'Оригінальні бездротові навушники Lenovo GM2 Pro Навушники Bluetooth Навушники з низькою затримкою Дворежимні ігрові навушники HD Call', 'https://rozetka.com.ua/ua/381377754/p381377754/', 'https://s.click.aliexpress.com/e/_oFHw9VE', 'https://ae-pic-a1.aliexpress-media.com/kf/Sb38478c9a3784d239f0ca9819d577df3I.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Lenovo GM2 Pro', 'Оригінальні бездротові навушники Lenovo GM2 Pro Навушники Bluetooth Навушники з низькою затримкою Дворежимні ігрові навушники HD Call', 'https://rozetka.com.ua/ua/381377754/p381377754/', 'https://s.click.aliexpress.com/e/_oFHw9VE', 'https://ae-pic-a1.aliexpress-media.com/kf/Sb38478c9a3784d239f0ca9819d577df3I.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S8ffbfda196694921a5e9f46dd18067100.jpg_220x220q75.jpg" alt="фото" />
+        <p>Shoumi TWS</p>
+        <button onclick="addToFavorites('Shoumi TWS', 'Ігрові навушники Shoumi TWS Бездротова ігрова гарнітура з низькою затримкою Звукова позиція Hifi Bass Earphone USB-адаптер для телевізора, ПК, телефону, геймера', 'посилання1', 'https://s.click.aliexpress.com/e/_oD0lpJe', 'https://ae-pic-a1.aliexpress-media.com/kf/S8ffbfda196694921a5e9f46dd18067100.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Shoumi TWS', 'Ігрові навушники Shoumi TWS Бездротова ігрова гарнітура з низькою затримкою Звукова позиція Hifi Bass Earphone USB-адаптер для телевізора, ПК, телефону, геймера', 'посилання1', 'https://s.click.aliexpress.com/e/_oD0lpJe', 'https://ae-pic-a1.aliexpress-media.com/kf/S8ffbfda196694921a5e9f46dd18067100.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S114e87ec6a6a454d8d25e1c3b1dac919D.jpg_220x220q75.jpg" alt="фото" />
+        <p>НОВИЙ Xiaomi Redmi Buds 4 </p>
+        <button onclick="addToFavorites('НОВИЙ Xiaomi Redmi Buds 4 ', 'НОВИЙ Xiaomi Redmi Buds 4 активні TWS навушники з шумозаглушенням, Bluetooth 5.3 мікрофон, бездротові навушники, спортивна гарнітура', 'https://rozetka.com.ua/ua/430024334/p430024334/', 'https://s.click.aliexpress.com/e/_oDozleG', 'https://ae-pic-a1.aliexpress-media.com/kf/S114e87ec6a6a454d8d25e1c3b1dac919D.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('НОВИЙ Xiaomi Redmi Buds 4 ', 'НОВИЙ Xiaomi Redmi Buds 4 активні TWS навушники з шумозаглушенням, Bluetooth 5.3 мікрофон, бездротові навушники, спортивна гарнітура', 'https://rozetka.com.ua/ua/430024334/p430024334/', 'https://s.click.aliexpress.com/e/_oDozleG', 'https://ae-pic-a1.aliexpress-media.com/kf/S114e87ec6a6a454d8d25e1c3b1dac919D.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S4bcd15d4c8554da1b32ab0032d8000fdo.jpg_220x220q75.jpg" alt="фото" />
+        <p>HBS910</p>
+        <button onclick="addToFavorites('HBS910', 'Нова портативна спортивна Bluetooth-гарнітура HBS910 з підвісною шиєю Бездротова спортивна 4.1 внутрішньоканальна жорстко висяча гарнітура для LG Iphone Xiaomi', 'посилання1', 'https://s.click.aliexpress.com/e/_oo22Juk', 'https://ae-pic-a1.aliexpress-media.com/kf/S4bcd15d4c8554da1b32ab0032d8000fdo.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('HBS910', 'Нова портативна спортивна Bluetooth-гарнітура HBS910 з підвісною шиєю Бездротова спортивна 4.1 внутрішньоканальна жорстко висяча гарнітура для LG Iphone Xiaomi', 'посилання1', 'https://s.click.aliexpress.com/e/_oo22Juk', 'https://ae-pic-a1.aliexpress-media.com/kf/S4bcd15d4c8554da1b32ab0032d8000fdo.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S95ab6a3672be4f629e599c4cb9c569565.jpg_220x220q75.jpg" alt="фото" />
+        <p>BINNUNE BW06</p>
+        <button onclick="addToFavorites('BINNUNE BW06', 'Бездротова ігрова гарнітура BINNUNE BW06 2.4 ГГц з мікрофоном для PS5 PS4 ПК Mac Playstation Bluetooth Ігрові навушники з мікрофоном', 'посилання1', 'https://s.click.aliexpress.com/e/_oEuZB7E', 'https://ae-pic-a1.aliexpress-media.com/kf/S95ab6a3672be4f629e599c4cb9c569565.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('BINNUNE BW06', 'Бездротова ігрова гарнітура BINNUNE BW06 2.4 ГГц з мікрофоном для PS5 PS4 ПК Mac Playstation Bluetooth Ігрові навушники з мікрофоном', 'посилання1', 'https://s.click.aliexpress.com/e/_oEuZB7E', 'https://ae-pic-a1.aliexpress-media.com/kf/S95ab6a3672be4f629e599c4cb9c569565.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sa40126838b3f40c8acaec986377751f31.jpg_220x220q75.jpg" alt="фото" />
+        <p>Навушники TWS Pro4</p>
+        <button onclick="addToFavorites('Навушники TWS Pro4', 'Навушники TWS Pro4 Bluetooth Бездротові навушники Міні Спортивна гарнітура Навушники Музичні навушники для iPhone Xiaomi Huawei Redmi', 'https://rozetka.com.ua/ua/470840259/p470840259/', 'https://s.click.aliexpress.com/e/_oFQQAKk', 'https://ae-pic-a1.aliexpress-media.com/kf/Sa40126838b3f40c8acaec986377751f31.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Навушники TWS Pro4', 'Навушники TWS Pro4 Bluetooth Бездротові навушники Міні Спортивна гарнітура Навушники Музичні навушники для iPhone Xiaomi Huawei Redmi', 'https://rozetka.com.ua/ua/470840259/p470840259/', 'https://s.click.aliexpress.com/e/_oFQQAKk', 'https://ae-pic-a1.aliexpress-media.com/kf/Sa40126838b3f40c8acaec986377751f31.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sb5c13c4e65464395b431ea901086c072F.jpg_220x220q75.jpg" alt="фото" />
+        <p>T75 Fone Bluetooth гарнітура 5.3</p>
+        <button onclick="addToFavorites('T75 Fone Bluetooth гарнітура 5.3', 'T75 Fone Bluetooth гарнітура 5.3 бездротові навушники з кістковою провідністю Кліпса Музика для вух Шумозаглушення HD Дзвінок Спортивні ігрові навушники', 'посилання1', 'https://s.click.aliexpress.com/e/_oFZCQAU', 'https://ae-pic-a1.aliexpress-media.com/kf/Sb5c13c4e65464395b431ea901086c072F.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('T75 Fone Bluetooth гарнітура 5.3', 'T75 Fone Bluetooth гарнітура 5.3 бездротові навушники з кістковою провідністю Кліпса Музика для вух Шумозаглушення HD Дзвінок Спортивні ігрові навушники', 'посилання1', 'https://s.click.aliexpress.com/e/_oFZCQAU', 'https://ae-pic-a1.aliexpress-media.com/kf/Sb5c13c4e65464395b431ea901086c072F.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S57355906c36d462dbb5c101799632e53o.png_220x220.png" alt="фото" />
+        <p>Бездротові навушники для сну TWS</p>
+        <button onclick="addToFavorites('Бездротові навушники для сну TWS', 'Бездротові навушники для сну TWS Bluetooth 5.3 Приховані навушники IPX5 Водонепроникна спортивна гарнітура з шумозаглушенням', 'посилання1', 'https://s.click.aliexpress.com/e/_on3CWTW', 'https://ae-pic-a1.aliexpress-media.com/kf/S57355906c36d462dbb5c101799632e53o.png_220x220.png')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Бездротові навушники для сну TWS', 'Бездротові навушники для сну TWS Bluetooth 5.3 Приховані навушники IPX5 Водонепроникна спортивна гарнітура з шумозаглушенням', 'посилання1', 'https://s.click.aliexpress.com/e/_on3CWTW', 'https://ae-pic-a1.aliexpress-media.com/kf/S57355906c36d462dbb5c101799632e53o.png_220x220.png')"><button>Переглянути</button></a>
+      </div>
+
+    
+      <div class="product-card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S5ac29502873d49bc87c3119e56372860C.jpg_220x220q75.jpg" alt="photo">
+        <p>Awei A997BL PRO</p>
+        <button onclick="addToFavorites('Awei A997BL PRO', 'Бездротові навушники Awei A997BL PRO Навушники Bluetooth Складна ігрова гарнітура Спортивні навушники з мікрофоном Музичні навушники 300 мАг', 'https://example.com/shopper', 'https://example.com/shopper', 
+        'https://ae-pic-a1.aliexpress-media.com/kf/S5ac29502873d49bc87c3119e56372860C.jpg_220x220q75.jpg')">Додати в обране</button>
+      <a href="details.html" onclick="openProduct('Awei A997BL PRO', 'headphones with 5.0 bluetooth', 'https://example1.com/shopper','https://example2.com/shopper', 'https://ae-pic-a1.aliexpress-media.com/kf/S5ac29502873d49bc87c3119e56372860C.jpg_220x220q75.jpg_)"><button>Переглянути</button></a>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <footer>
+    <div>© 2025 CT Маркетплейс</div>
+    <p><a href="contacts.html">Контакти</a> | <a href="confidance.html">Політика конфіденційності</a> | <a href="social.html">Соцмережі</a></p>
+  </footer>
+<!--   <script>
+  const userArea = document.getElementById("user-link");
+  const currentUser = localStorage.getItem("currentUser");
+
+  if (currentUser) {
+    userArea.textContent = currentUser;
+    // userArea.href = "#";
+    userArea.style.fontWeight = "bold";
+    userArea.style.color = "#8c3b16";
+    // Якщо потрібно, заміни # на посилання на профіль
+  }
+</script> -->
+<script>
+  const currentUser = localStorage.getItem("currentUser");
+  const userNameSpan = document.getElementById("user-name");
+  const loginLink = document.getElementById("login-link");
+  const logoutBtn = document.getElementById("logout-btn");
+
+  if (currentUser) {
+    userNameSpan.textContent = currentUser;
+    loginLink.style.display = "none";
+    logoutBtn.style.display = "inline-block";
+  }
+
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("currentUser");
+    location.reload(); // перезавантажити сторінку
+  });
+</script>
+<script>
+    function addToFavorites(name, description, url1, url2, img) {
+      let favorites1 = JSON.parse(localStorage.getItem('favorites1')) || [];
+      if (!favorites1.some(item => item.name === name)) {
+        favorites1.push({ name, description, url1, url2, img });
+        localStorage.setItem('favorites1', JSON.stringify(favorites1));
+        alert(`${name} додано до обраного!`);
+      } else {
+        alert(`${name} вже в обраному.`);
+      }
+    }
+
+    function openProduct(name, description, url1, url2, img) {
+      localStorage.setItem('selectedProduct', JSON.stringify({ name, description, url1, url2, img }));
+      window.location.href = 'product.html';
+    }
+  </script>
+</body>
+</html>

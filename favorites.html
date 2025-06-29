@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Обране – CT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="icon5.png">
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f6e4c1; padding: 40px; color: #2c1e13; }
+    h1 { color: #8c3b16; margin-bottom: 30px; }
+    .favorites-list { max-width: 600px; margin: auto; }
+    .fav-item { background: white; padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .fav-item h2 { margin-bottom: 10px; }
+    .fav-item p { margin-bottom: 10px; }
+    .fav-item a, .fav-item button { background: #8c3b16; color: white; text-decoration: none; padding: 10px 16px; border-radius: 8px; border: none; cursor: pointer; margin-right: 10px; }
+    .fav-item button { background: #d9534f; }
+    nav a { margin-right: 15px; text-decoration: none; color: #2c1e13; font-weight: 500; }
+    header, footer { background-color: #fff0da; 
+      padding: 20px 40px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      border-radius: 8px; }
+    .logo { font-family: 'Montserrat', sans-serif; 
+      font-size: 24px; 
+      font-weight: 700; 
+      color: #8c3b16; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">CT</div>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+      <a href="favorites.html">Обране</a>
+      <!-- <a href="#" class="cta-btn" style="background:#d9981d; color:#fff; padding:8px 16px; border-radius:6px;">Стати продавцем</a> -->
+    </nav>
+    <div id="user-area" style="text-align: right; padding: 10px;">
+  <span id="user-name"></span>
+  <a href="login.html" id="login-link" style="
+  margin-left: 10px;
+  ">Увійти</a>
+  <button id="logout-btn" style="
+  display:none; 
+  margin-left: 10px; 
+  background:#8c3b16; 
+  color:white; 
+  border:none; 
+  padding:5px 10px; 
+  border-radius:6px; 
+  cursor:pointer;
+  ">Вийти</button>
+</div>
+  </header>
+
+  <h1>Обране</h1>
+  <div class="favorites1-list" id="favorites1List">
+    <!-- Тут будуть товари -->
+  </div>
+
+  <script>
+  function openProduct(name, description, url, img) {
+    localStorage.setItem('selectedProduct', JSON.stringify({ name, description, url, img }));
+    window.location.href = 'product.html';
+  }
+
+  function removeFavorite(name) {
+    let favorites1 = JSON.parse(localStorage.getItem('favorites1')) || [];
+    favorites1 = favorites1.filter(item => item.name !== name);
+    localStorage.setItem('favorites1', JSON.stringify(favorites1));
+    loadFavorites1();
+  }
+
+  function loadFavorites1() {
+    const container = document.getElementById('favorites1List');
+    let favorites1 = JSON.parse(localStorage.getItem('favorites1')) || [];
+    container.innerHTML = '';
+    if (favorites1.length === 0) {
+      container.innerHTML = '<p>Ваш список обраного порожній.</p>';
+      return;
+    }
+    favorites1.forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'fav-item';
+      div.innerHTML = `
+        <h2>${item.name}</h2>
+        <p>${item.description}</p>
+        <button onclick="removeFavorite('${item.name}')">Видалити</button>
+        <a href="details.html" onclick="openProduct('${item.name}', '${item.description}', '${item.url}', '${item.img}')">Переглянути</a>
+      `;
+      container.appendChild(div);
+    });
+  }
+
+  loadFavorites1();
+</script>
+  <script>
+  const currentUser = localStorage.getItem("currentUser");
+  const userNameSpan = document.getElementById("user-name");
+  const loginLink = document.getElementById("login-link");
+  const logoutBtn = document.getElementById("logout-btn");
+
+  if (currentUser) {
+    userNameSpan.textContent = currentUser;
+    loginLink.style.display = "none";
+    logoutBtn.style.display = "inline-block";
+  }
+
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("currentUser");
+    location.reload(); // перезавантажити сторінку
+  });
+</script>
+</body>
+</html>

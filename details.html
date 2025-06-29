@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Деталі товару – CT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="icon5.png">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background-color: #f6e4c1; color: #2c1e13; line-height: 1.6; padding: 20px; }
+    .container { background: #fff6e9; border-radius: 12px; padding: 40px; max-width: 800px; margin: auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    img{
+      border-radius: 8px;
+      margin-bottom: 5px;
+    }
+    h1 { font-family: 'Montserrat', sans-serif; margin-bottom: 20px; font-size: 28px; color: #8c3b16; }
+    p { font-size: 18px; margin-bottom: 20px; }
+    a.buy-link { background: #8c3b16; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: 600; }
+    a.back-link { display: inline-block; margin-top: 30px; color: #8c3b16; text-decoration: underline; }
+    header, footer { background-color: #fff0da; 
+      padding: 20px 40px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      border-radius: 8px; }
+    .logo { font-family: 'Montserrat', sans-serif; 
+      font-size: 24px; 
+      font-weight: 700; 
+      color: #8c3b16; }
+    nav a { margin: 0 15px; 
+      text-decoration: none; 
+      color: #2c1e13; 
+      font-weight: 500;
+      border-radius: 8px; }
+    .cta-btn { background: #d9981d; 
+      color: white; 
+      padding: 10px 20px;
+       border-radius: 8px; 
+       text-decoration: none; 
+       font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">CT</div>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+      <a href="favorites.html">Обране</a>
+      
+    </nav>
+    <div id="user-area" style="text-align: right; padding: 10px;">
+  <span id="user-name"></span>
+  <a href="login.html" id="login-link" style="
+  margin-left: 10px;
+  ">Увійти</a>
+  <button id="logout-btn" style="
+  display:none; 
+  margin-left: 10px; 
+  background:#8c3b16; 
+  color:white; 
+  border:none; 
+  padding:5px 10px; 
+  border-radius:6px; 
+  cursor:pointer;
+  ">Вийти</button>
+</div>
+  </header>
+  <br>
+  <div class="container">
+    <img id="productImg" alt="photo">
+    <h1 id="productName">Назва товару</h1>
+    <p id="productDescription">Опис товару</p>
+    <a id="productLink1" class="buy-link" href="#" target="_blank">Перейти до покупки на Roozetka.com</a>
+    <br>
+    <br>
+    <a id="productLink2" class="buy-link" href="#" target="_blank2">Перейти до покупки на Aliexpres.com</a>
+    <br>
+    <a href="catalog.html" class="back-link">← Назад до каталогу</a>
+  </div>
+
+  <script>
+    const product = JSON.parse(localStorage.getItem('selectedProduct'));
+    if (product) {
+      document.getElementById('productName').textContent = product.name;
+      document.getElementById('productDescription').textContent = product.description;
+      document.getElementById('productLink1').href = product.url1;
+      document.getElementById('productLink2').href = product.url2;
+      document.getElementById('productImg').src = product.img;
+    }
+  </script>
+  <script>
+  const currentUser = localStorage.getItem("currentUser");
+  const userNameSpan = document.getElementById("user-name");
+  const loginLink = document.getElementById("login-link");
+  const logoutBtn = document.getElementById("logout-btn");
+
+  if (currentUser) {
+    userNameSpan.textContent = currentUser;
+    loginLink.style.display = "none";
+    logoutBtn.style.display = "inline-block";
+  }
+
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("currentUser");
+    location.reload(); // перезавантажити сторінку
+  });
+</script>
+</body>
+</html>

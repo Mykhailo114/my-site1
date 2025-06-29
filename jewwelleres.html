@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навушники – CT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="icon5.png">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background-color: #f6e4c1; padding: 20px; }
+    h1 { font-size: 28px; margin-bottom: 20px; color: #8c3b16; }
+    .grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .card { background: white; border-radius: 12px; padding: 20px; width: 200px; text-align: center; }
+    .card img { width: 100%; height: auto; border-radius: 8px; }
+    .card button { margin-top: 10px; display: block; text-decoration: none; border: none; background: #8c3b16; color: white; padding: 8px; border-radius: 6px; cursor: pointer; }
+
+    .card a { margin-top: 10px; display: block; text-decoration: none; border: none; background: #8c3b16; color: white; border-radius: 6px; cursor: pointer; align: center;}
+    header, footer { background-color: #fff0da; 
+      padding: 20px 40px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      border-radius: 8px; }
+    .logo { font-family: 'Montserrat', sans-serif; 
+      font-size: 24px; 
+      font-weight: 700; 
+      color: #8c3b16; }
+    nav a { margin: 0 15px; 
+      text-decoration: none; 
+      color: #2c1e13; 
+      font-weight: 500;
+      border-radius: 8px; }
+    .cta-btn { background: #d9981d; 
+      color: white; 
+      padding: 10px 20px;
+       border-radius: 8px; 
+       text-decoration: none; 
+       font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">CT</div>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+      <a href="favorites.html">Обране</a>
+  
+      
+    </nav>
+    <div id="user-area" style="text-align: right; padding: 10px;">
+  <span id="user-name"></span>
+  <a href="login.html" id="login-link" style="
+  margin-left: 10px;
+  ">Увійти</a>
+  <button id="logout-btn" style="
+  display:none; 
+  margin-left: 10px; 
+  background:#8c3b16; 
+  color:white; 
+  border:none; 
+  padding:5px 10px; 
+  border-radius:6px; 
+  cursor:pointer;
+  ">Вийти</button>
+</div>
+  </header>
+  <br>
+  <h1>Ювелірні прикраси</h1>
+  <br>
+  <div class="grid">
+    
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sc10d058b5592441281c9f094fea0fa53V.jpg_220x220q75.jpg" alt="фото" />
+        <p>Базовий панк </p>
+        <button onclick="addToFavorites('Базовий панк ', 'Базовий панк з нержавіючої сталі 3,5,7 мм бордюрні кубинські намиста для чоловіків жінки з чорним золотом кольорові ланцюжки чокери суцільні металеві прикраси', 'https://rozetka.com.ua/ua/455319574/p455319574/', 'https://s.click.aliexpress.com/e/_opjRK0e', 'https://ae-pic-a1.aliexpress-media.com/kf/Sc10d058b5592441281c9f094fea0fa53V.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Назва', 'Опис', 'посилання1', 'посилання2', 'фото')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S45706d5bef0e4328b540e6467884d7eb3.jpeg_220x220q75.jpeg" alt="фото" />
+        <p> Французький набір жіночих браслетів</p>
+        <button onclick="addToFavorites(' Французький набір жіночих браслетів', '3шт Французький набір жіночих браслетів Lucky Clover Високоякісний браслет з нержавіючої сталі INS Гарячий продаж ювелірних виробів Charm Feeling Ювелірний подарунок', 'https://rozetka.com.ua/ua/475333624/p475333624/', 'https://s.click.aliexpress.com/e/_oCVrki2', 'https://ae-pic-a1.aliexpress-media.com/kf/S45706d5bef0e4328b540e6467884d7eb3.jpeg_220x220q75.jpeg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Назва', 'Опис', 'посилання1', 'посилання2', 'фото')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Se7a2490f8e454fc4bd10d3d04f680ec6G.jpg_220x220q75.jpg" alt="фото" />
+        <p>Чорний силіконовий браслет</p>
+        <button onclick="addToFavorites('Чорний силіконовий браслет', 'Християнська Біблія Текст молитви Хрест Манжета з нержавіючої сталі Браслет Чорний силіконовий браслет Жінки Чоловіки Пара Ювелірні вироби Подарунки', 'посилання1', 'https://s.click.aliexpress.com/e/_ok7GTQe', 'https://ae-pic-a1.aliexpress-media.com/kf/Se7a2490f8e454fc4bd10d3d04f680ec6G.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Чорний силіконовий браслет', 'Християнська Біблія Текст молитви Хрест Манжета з нержавіючої сталі Браслет Чорний силіконовий браслет Жінки Чоловіки Пара Ювелірні вироби Подарунки', 'посилання1', 'https://s.click.aliexpress.com/e/_ok7GTQe', 'https://ae-pic-a1.aliexpress-media.com/kf/Se7a2490f8e454fc4bd10d3d04f680ec6G.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+       <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sd8ceb4dc447e4f35a1cd0436cdaec3c23.png_220x220.png" alt="фото" />
+        <p>Пляжний набір анклетів </p>
+        <button onclick="addToFavorites('Пляжний набір анклетів', '3 шт Пляжний набір анклетів з бісеру для жінок вінтажний літній золотий колір Морська зірка Панцир Чари Анклет Відпустка Щоденне носіння ювелірних виробів Подарунки', 'https://rozetka.com.ua/ua/497912204/p497912204/', 'https://s.click.aliexpress.com/e/_opRWfJs', 'https://ae-pic-a1.aliexpress-media.com/kf/Sd8ceb4dc447e4f35a1cd0436cdaec3c23.png_220x220.png')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Пляжний набір анклетів', '3 шт Пляжний набір анклетів з бісеру для жінок вінтажний літній золотий колір Морська зірка Панцир Чари Анклет Відпустка Щоденне носіння ювелірних виробів Подарунки', 'https://rozetka.com.ua/ua/497912204/p497912204/', 'https://s.click.aliexpress.com/e/_opRWfJs', 'https://ae-pic-a1.aliexpress-media.com/kf/Sd8ceb4dc447e4f35a1cd0436cdaec3c23.png_220x220.png')"><button>Переглянути</button></a>
+      </div>
+
+       
+       <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Scf2e05e2e585486c8430e7126244bc55E.jpg_220x220q75.jpg" alt="фото" />
+        <p>Затискач для носа</p>
+        <button onclick="addToFavorites('Затискач для носа', 'Жінки Чоловіки Підроблені сережки з кільцем для носа Модний панк Непірсинг Затискач для носа Перфорація з нержавіючої сталі Перегородка Боді Прикраси', 'https://rozetka.com.ua/ua/483344539/p483344539/', 'https://s.click.aliexpress.com/e/_onjIUjc', 'https://ae-pic-a1.aliexpress-media.com/kf/Scf2e05e2e585486c8430e7126244bc55E.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Затискач для носа', 'Жінки Чоловіки Підроблені сережки з кільцем для носа Модний панк Непірсинг Затискач для носа Перфорація з нержавіючої сталі Перегородка Боді Прикраси', 'https://rozetka.com.ua/ua/483344539/p483344539/', 'https://s.click.aliexpress.com/e/_onjIUjc', 'https://ae-pic-a1.aliexpress-media.com/kf/Scf2e05e2e585486c8430e7126244bc55E.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+
+  </div>
+  <script>
+    function addToFavorites(name, description, url, img) {
+      let favorites1 = JSON.parse(localStorage.getItem('favorites1')) || [];
+      if (!favorites1.some(item => item.name === name)) {
+        favorites1.push({ name, description, url, img });
+        localStorage.setItem('favorites1', JSON.stringify(favorites1));
+        alert(`${name} додано до обраного!`);
+      } else {
+        alert(`${name} вже в обраному.`);
+      }
+    }
+
+    function openProduct(name, description, url, img) {
+      localStorage.setItem('selectedProduct', JSON.stringify({ name, description, url, img }));
+      window.location.href = 'product.html';
+    }
+  </script>
+  <script>
+  const currentUser = localStorage.getItem("currentUser");
+  const userNameSpan = document.getElementById("user-name");
+  const loginLink = document.getElementById("login-link");
+  const logoutBtn = document.getElementById("logout-btn");
+
+  if (currentUser) {
+    userNameSpan.textContent = currentUser;
+    loginLink.style.display = "none";
+    logoutBtn.style.display = "inline-block";
+  }
+
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("currentUser");
+    location.reload(); // перезавантажити сторінку
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навушники – CT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="icon5.png">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background-color: #f6e4c1; padding: 20px; }
+    h1 { font-size: 28px; margin-bottom: 20px; color: #8c3b16; }
+    .grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .card { background: white; border-radius: 12px; padding: 20px; width: 200px; text-align: center; }
+    .card img { width: 100%; height: auto; border-radius: 8px; }
+    .card button { margin-top: 10px; display: block; text-decoration: none; border: none; background: #8c3b16; color: white; padding: 8px; border-radius: 6px; cursor: pointer; }
+
+    .card a { margin-top: 10px; display: block; text-decoration: none; border: none; background: #8c3b16; color: white; border-radius: 6px; cursor: pointer; align: center;}
+    header, footer { background-color: #fff0da; 
+      padding: 20px 40px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      border-radius: 8px; }
+    .logo { font-family: 'Montserrat', sans-serif; 
+      font-size: 24px; 
+      font-weight: 700; 
+      color: #8c3b16; }
+    nav a { margin: 0 15px; 
+      text-decoration: none; 
+      color: #2c1e13; 
+      font-weight: 500;
+      border-radius: 8px; }
+    .cta-btn { background: #d9981d; 
+      color: white; 
+      padding: 10px 20px;
+       border-radius: 8px; 
+       text-decoration: none; 
+       font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">CT</div>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+      <a href="favorites.html">Обране</a>
+  
+      
+    </nav>
+    <div id="user-area" style="text-align: right; padding: 10px;">
+  <span id="user-name"></span>
+  <a href="login.html" id="login-link" style="
+  margin-left: 10px;
+  ">Увійти</a>
+  <button id="logout-btn" style="
+  display:none; 
+  margin-left: 10px; 
+  background:#8c3b16; 
+  color:white; 
+  border:none; 
+  padding:5px 10px; 
+  border-radius:6px; 
+  cursor:pointer;
+  ">Вийти</button>
+</div>
+  </header>
+  <br>
+  <h1>Навушники</h1>
+  <br>
+  <div class="grid">
+
+    <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sd73a83782e1d4fc2944463d25cc74716i.jpg_220x220q75.jpg" alt="фото" />
+        <p>P47 Бездротові навушники</p>
+        <button onclick="addToFavorites('P47 Бездротові навушники', 'P47 Бездротові навушники Bluetooth з мікрофонними гарнітурами Стереозвукові навушники Спортивні ігрові навушники підтримують ПК Смартфон', 'https://rozetka.com.ua/ua/387337425/p387337425/', 'https://s.click.aliexpress.com/e/_onlwh0u', 'https://ae-pic-a1.aliexpress-media.com/kf/Sd73a83782e1d4fc2944463d25cc74716i.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('P47 Бездротові навушники', 'P47 Бездротові навушники Bluetooth з мікрофонними гарнітурами Стереозвукові навушники Спортивні ігрові навушники підтримують ПК Смартфон', 'https://rozetka.com.ua/ua/387337425/p387337425/', 'https://s.click.aliexpress.com/e/_onlwh0u', 'https://ae-pic-a1.aliexpress-media.com/kf/Sd73a83782e1d4fc2944463d25cc74716i.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+    <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S852b31dacbf245f9aca6a8e85c34fbacG.jpg_220x220q75.jpg" alt="фото" />
+        <p> Lenovo XT53 </p>
+        <button onclick="addToFavorites(' Lenovo XT53 ', 'Навушники Lenovo XT53 Wireless Upgrade Bluetooth 5.4 Ігрова гарнітура з ультратривалою витривалістю та низькою затримкою Світлодіодні навушники з цифровим дисплеєм', 'https://rozetka.com.ua/ua/469760679/p469760679/', 'https://s.click.aliexpress.com/e/_oktQIPi', 'https://ae-pic-a1.aliexpress-media.com/kf/S852b31dacbf245f9aca6a8e85c34fbacG.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct(' Lenovo XT53 ', 'Навушники Lenovo XT53 Wireless Upgrade Bluetooth 5.4 Ігрова гарнітура з ультратривалою витривалістю та низькою затримкою Світлодіодні навушники з цифровим дисплеєм', 'https://rozetka.com.ua/ua/469760679/p469760679/', 'https://s.click.aliexpress.com/e/_oktQIPi', 'https://ae-pic-a1.aliexpress-media.com/kf/S852b31dacbf245f9aca6a8e85c34fbacG.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S683e6cfea8c247daa71321b42909afb35.jpg_220x220q75.jpg" alt="фото" />
+        <p>Xiaomi A98</p>
+        <button onclick="addToFavorites('Xiaomi A98', 'Бездротова гарнітура Xiaomi A98 з перекладом Bluetooth 5.3 Стерео водонепроникні навушники Вбудований мікрофон Спортивні навушники', 'посилання1', 'https://s.click.aliexpress.com/e/_oEpzw4U', 'https://ae-pic-a1.aliexpress-media.com/kf/S683e6cfea8c247daa71321b42909afb35.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Xiaomi A98', 'Бездротова гарнітура Xiaomi A98 з перекладом Bluetooth 5.3 Стерео водонепроникні навушники Вбудований мікрофон Спортивні навушники', 'посилання1', 'https://s.click.aliexpress.com/e/_oEpzw4U', 'https://ae-pic-a1.aliexpress-media.com/kf/S683e6cfea8c247daa71321b42909afb35.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sec024e2b9ca04ca1bf70404e630a0d5cl.jpg_220x220q75.jpg" alt="фото" />
+        <p> VAORLO Bluetooth 5.2</p>
+        <button onclick="addToFavorites('VAORLO Bluetooth 5.2', 'Бездротові навушники VAORLO Bluetooth 5.2 Business Ear-Hook Mini HIFI Bass з шумозаглушенням і мікрофоном Спортивна ігрова гарнітура', 'посилання1', 'https://s.click.aliexpress.com/e/_oDyQuoM', 'https://ae-pic-a1.aliexpress-media.com/kf/Sec024e2b9ca04ca1bf70404e630a0d5cl.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct(' VAORLO Bluetooth 5.2', 'Бездротові навушники VAORLO Bluetooth 5.2 Business Ear-Hook Mini HIFI Bass з шумозаглушенням і мікрофоном Спортивна ігрова гарнітура', 'посилання1', 'https://s.click.aliexpress.com/e/_oDyQuoM', 'https://ae-pic-a1.aliexpress-media.com/kf/Sec024e2b9ca04ca1bf70404e630a0d5cl.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S8041f89a371c49dca25e2497c6448a998.jpg_220x220q75.jpg" alt="фото" />
+        <p>Bluetooth V8 </p>
+        <button onclick="addToFavorites('Bluetooth V8 ', 'Нові бездротові одиночні навушники Bluetooth V8 з HD мікрофоном Стереогарнітура Handsfree Call Бізнес-навушники для спорту, водіння, подорожей', 'посилання1', 'https://s.click.aliexpress.com/e/_om7rRXW', 'https://ae-pic-a1.aliexpress-media.com/kf/S8041f89a371c49dca25e2497c6448a998.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Bluetooth V8 ', 'Нові бездротові одиночні навушники Bluetooth V8 з HD мікрофоном Стереогарнітура Handsfree Call Бізнес-навушники для спорту, водіння, подорожей', 'посилання1', 'https://s.click.aliexpress.com/e/_om7rRXW', 'https://ae-pic-a1.aliexpress-media.com/kf/S8041f89a371c49dca25e2497c6448a998.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sfdc3a92cba69471bb64c4a72b220272bY.jpg_220x220q75.jpg" alt="фото" />
+        <p>Apple AirPods Pro2 </p>
+        <button onclick="addToFavorites('Apple AirPods Pro2 ', 'Оригінальні бездротові навушники Apple AirPods Pro2 Bluetooth навушники у вухах Tws Gaming Спортивні навушники для смартфонів Air IPhone', 'https://rozetka.com.ua/ua/507439454/p507439454/', 'https://www.aliexpress.com/item/1005008822274950.html?spm=a2g0o.productlist.main.21.4db532e0F5xqff&utparam-url=scene%3Asearch%7Cquery_from%3Apc_back_same_best&algo_pvid=f814004e-99e3-4312-af00-5e41c451c6af&algo_exp_id=f814004e-99e3-4312-af00-5e41c451c6af&pdp_ext_f=%7B%22order%22%3A%22319%22%7D&pdp_npi=4%40dis%21UAH%212752.97%211376.48%21%21%21420.00%21210.00%21%402103985c17505139285772991e1290%2112000048239033969%21sea%21UA%216333419212%21ABX', 'https://ae-pic-a1.aliexpress-media.com/kf/Sfdc3a92cba69471bb64c4a72b220272bY.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Apple AirPods Pro2 ', 'Оригінальні бездротові навушники Apple AirPods Pro2 Bluetooth навушники у вухах Tws Gaming Спортивні навушники для смартфонів Air IPhone', 'https://rozetka.com.ua/ua/507439454/p507439454/', 'https://www.aliexpress.com/item/1005008822274950.html?spm=a2g0o.productlist.main.21.4db532e0F5xqff&utparam-url=scene%3Asearch%7Cquery_from%3Apc_back_same_best&algo_pvid=f814004e-99e3-4312-af00-5e41c451c6af&algo_exp_id=f814004e-99e3-4312-af00-5e41c451c6af&pdp_ext_f=%7B%22order%22%3A%22319%22%7D&pdp_npi=4%40dis%21UAH%212752.97%211376.48%21%21%21420.00%21210.00%21%402103985c17505139285772991e1290%2112000048239033969%21sea%21UA%216333419212%21ABX', 'https://ae-pic-a1.aliexpress-media.com/kf/Sfdc3a92cba69471bb64c4a72b220272bY.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sb38478c9a3784d239f0ca9819d577df3I.jpg_220x220q75.jpg" alt="фото" />
+        <p>Lenovo GM2 Pro</p>
+        <button onclick="addToFavorites('Lenovo GM2 Pro', 'Оригінальні бездротові навушники Lenovo GM2 Pro Навушники Bluetooth Навушники з низькою затримкою Дворежимні ігрові навушники HD Call', 'https://rozetka.com.ua/ua/381377754/p381377754/', 'https://s.click.aliexpress.com/e/_oFHw9VE', 'https://ae-pic-a1.aliexpress-media.com/kf/Sb38478c9a3784d239f0ca9819d577df3I.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Lenovo GM2 Pro', 'Оригінальні бездротові навушники Lenovo GM2 Pro Навушники Bluetooth Навушники з низькою затримкою Дворежимні ігрові навушники HD Call', 'https://rozetka.com.ua/ua/381377754/p381377754/', 'https://s.click.aliexpress.com/e/_oFHw9VE', 'https://ae-pic-a1.aliexpress-media.com/kf/Sb38478c9a3784d239f0ca9819d577df3I.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S8ffbfda196694921a5e9f46dd18067100.jpg_220x220q75.jpg" alt="фото" />
+        <p>Shoumi TWS</p>
+        <button onclick="addToFavorites('Shoumi TWS', 'Ігрові навушники Shoumi TWS Бездротова ігрова гарнітура з низькою затримкою Звукова позиція Hifi Bass Earphone USB-адаптер для телевізора, ПК, телефону, геймера', 'посилання1', 'https://s.click.aliexpress.com/e/_oD0lpJe', 'https://ae-pic-a1.aliexpress-media.com/kf/S8ffbfda196694921a5e9f46dd18067100.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Shoumi TWS', 'Ігрові навушники Shoumi TWS Бездротова ігрова гарнітура з низькою затримкою Звукова позиція Hifi Bass Earphone USB-адаптер для телевізора, ПК, телефону, геймера', 'посилання1', 'https://s.click.aliexpress.com/e/_oD0lpJe', 'https://ae-pic-a1.aliexpress-media.com/kf/S8ffbfda196694921a5e9f46dd18067100.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S114e87ec6a6a454d8d25e1c3b1dac919D.jpg_220x220q75.jpg" alt="фото" />
+        <p>НОВИЙ Xiaomi Redmi Buds 4 </p>
+        <button onclick="addToFavorites('НОВИЙ Xiaomi Redmi Buds 4 ', 'НОВИЙ Xiaomi Redmi Buds 4 активні TWS навушники з шумозаглушенням, Bluetooth 5.3 мікрофон, бездротові навушники, спортивна гарнітура', 'https://rozetka.com.ua/ua/430024334/p430024334/', 'https://s.click.aliexpress.com/e/_oDozleG', 'https://ae-pic-a1.aliexpress-media.com/kf/S114e87ec6a6a454d8d25e1c3b1dac919D.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('НОВИЙ Xiaomi Redmi Buds 4 ', 'НОВИЙ Xiaomi Redmi Buds 4 активні TWS навушники з шумозаглушенням, Bluetooth 5.3 мікрофон, бездротові навушники, спортивна гарнітура', 'https://rozetka.com.ua/ua/430024334/p430024334/', 'https://s.click.aliexpress.com/e/_oDozleG', 'https://ae-pic-a1.aliexpress-media.com/kf/S114e87ec6a6a454d8d25e1c3b1dac919D.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S4bcd15d4c8554da1b32ab0032d8000fdo.jpg_220x220q75.jpg" alt="фото" />
+        <p>HBS910</p>
+        <button onclick="addToFavorites('HBS910', 'Нова портативна спортивна Bluetooth-гарнітура HBS910 з підвісною шиєю Бездротова спортивна 4.1 внутрішньоканальна жорстко висяча гарнітура для LG Iphone Xiaomi', 'посилання1', 'https://s.click.aliexpress.com/e/_oo22Juk', 'https://ae-pic-a1.aliexpress-media.com/kf/S4bcd15d4c8554da1b32ab0032d8000fdo.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('HBS910', 'Нова портативна спортивна Bluetooth-гарнітура HBS910 з підвісною шиєю Бездротова спортивна 4.1 внутрішньоканальна жорстко висяча гарнітура для LG Iphone Xiaomi', 'посилання1', 'https://s.click.aliexpress.com/e/_oo22Juk', 'https://ae-pic-a1.aliexpress-media.com/kf/S4bcd15d4c8554da1b32ab0032d8000fdo.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S95ab6a3672be4f629e599c4cb9c569565.jpg_220x220q75.jpg" alt="фото" />
+        <p>BINNUNE BW06</p>
+        <button onclick="addToFavorites('BINNUNE BW06', 'Бездротова ігрова гарнітура BINNUNE BW06 2.4 ГГц з мікрофоном для PS5 PS4 ПК Mac Playstation Bluetooth Ігрові навушники з мікрофоном', 'посилання1', 'https://s.click.aliexpress.com/e/_oEuZB7E', 'https://ae-pic-a1.aliexpress-media.com/kf/S95ab6a3672be4f629e599c4cb9c569565.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('BINNUNE BW06', 'Бездротова ігрова гарнітура BINNUNE BW06 2.4 ГГц з мікрофоном для PS5 PS4 ПК Mac Playstation Bluetooth Ігрові навушники з мікрофоном', 'посилання1', 'https://s.click.aliexpress.com/e/_oEuZB7E', 'https://ae-pic-a1.aliexpress-media.com/kf/S95ab6a3672be4f629e599c4cb9c569565.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sa40126838b3f40c8acaec986377751f31.jpg_220x220q75.jpg" alt="фото" />
+        <p>Навушники TWS Pro4</p>
+        <button onclick="addToFavorites('Навушники TWS Pro4', 'Навушники TWS Pro4 Bluetooth Бездротові навушники Міні Спортивна гарнітура Навушники Музичні навушники для iPhone Xiaomi Huawei Redmi', 'https://rozetka.com.ua/ua/470840259/p470840259/', 'https://s.click.aliexpress.com/e/_oFQQAKk', 'https://ae-pic-a1.aliexpress-media.com/kf/Sa40126838b3f40c8acaec986377751f31.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Навушники TWS Pro4', 'Навушники TWS Pro4 Bluetooth Бездротові навушники Міні Спортивна гарнітура Навушники Музичні навушники для iPhone Xiaomi Huawei Redmi', 'https://rozetka.com.ua/ua/470840259/p470840259/', 'https://s.click.aliexpress.com/e/_oFQQAKk', 'https://ae-pic-a1.aliexpress-media.com/kf/Sa40126838b3f40c8acaec986377751f31.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sb5c13c4e65464395b431ea901086c072F.jpg_220x220q75.jpg" alt="фото" />
+        <p>T75 Fone Bluetooth гарнітура 5.3</p>
+        <button onclick="addToFavorites('T75 Fone Bluetooth гарнітура 5.3', 'T75 Fone Bluetooth гарнітура 5.3 бездротові навушники з кістковою провідністю Кліпса Музика для вух Шумозаглушення HD Дзвінок Спортивні ігрові навушники', 'посилання1', 'https://s.click.aliexpress.com/e/_oFZCQAU', 'https://ae-pic-a1.aliexpress-media.com/kf/Sb5c13c4e65464395b431ea901086c072F.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('T75 Fone Bluetooth гарнітура 5.3', 'T75 Fone Bluetooth гарнітура 5.3 бездротові навушники з кістковою провідністю Кліпса Музика для вух Шумозаглушення HD Дзвінок Спортивні ігрові навушники', 'посилання1', 'https://s.click.aliexpress.com/e/_oFZCQAU', 'https://ae-pic-a1.aliexpress-media.com/kf/Sb5c13c4e65464395b431ea901086c072F.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S57355906c36d462dbb5c101799632e53o.png_220x220.png" alt="фото" />
+        <p>Бездротові навушники для сну TWS</p>
+        <button onclick="addToFavorites('Бездротові навушники для сну TWS', 'Бездротові навушники для сну TWS Bluetooth 5.3 Приховані навушники IPX5 Водонепроникна спортивна гарнітура з шумозаглушенням', 'посилання1', 'https://s.click.aliexpress.com/e/_on3CWTW', 'https://ae-pic-a1.aliexpress-media.com/kf/S57355906c36d462dbb5c101799632e53o.png_220x220.png')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Бездротові навушники для сну TWS', 'Бездротові навушники для сну TWS Bluetooth 5.3 Приховані навушники IPX5 Водонепроникна спортивна гарнітура з шумозаглушенням', 'посилання1', 'https://s.click.aliexpress.com/e/_on3CWTW', 'https://ae-pic-a1.aliexpress-media.com/kf/S57355906c36d462dbb5c101799632e53o.png_220x220.png')"><button>Переглянути</button></a>
+      </div>
+
+    
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S5ac29502873d49bc87c3119e56372860C.jpg_220x220q75.jpg" alt="photo">
+        <p>Awei A997BL PRO</p>
+        <button onclick="addToFavorites('Awei A997BL PRO', 'Бездротові навушники Awei A997BL PRO Навушники Bluetooth Складна ігрова гарнітура Спортивні навушники з мікрофоном Музичні навушники 300 мАг', 'https://example.com/shopper', 'https://example.com/shopper', 
+        'https://ae-pic-a1.aliexpress-media.com/kf/S5ac29502873d49bc87c3119e56372860C.jpg_220x220q75.jpg')">Додати в обране</button>
+      <a href="details.html" onclick="openProduct('Awei A997BL PRO', 'headphones with 5.0 bluetooth', 'https://example1.com/shopper','https://example2.com/shopper', 'https://ae-pic-a1.aliexpress-media.com/kf/S5ac29502873d49bc87c3119e56372860C.jpg_220x220q75.jpg_)"><button>Переглянути</button></a>
+      </div>
+  </div>
+
+  <script>
+    function addToFavorites(name, description, url, img) {
+      let favorites1 = JSON.parse(localStorage.getItem('favorites1')) || [];
+      if (!favorites1.some(item => item.name === name)) {
+        favorites1.push({ name, description, url, img });
+        localStorage.setItem('favorites1', JSON.stringify(favorites1));
+        alert(`${name} додано до обраного!`);
+      } else {
+        alert(`${name} вже в обраному.`);
+      }
+    }
+
+    function openProduct(name, description, url, img) {
+      localStorage.setItem('selectedProduct', JSON.stringify({ name, description, url, img }));
+      window.location.href = 'product.html';
+    }
+  </script>
+  <script>
+  const currentUser = localStorage.getItem("currentUser");
+  const userNameSpan = document.getElementById("user-name");
+  const loginLink = document.getElementById("login-link");
+  const logoutBtn = document.getElementById("logout-btn");
+
+  if (currentUser) {
+    userNameSpan.textContent = currentUser;
+    loginLink.style.display = "none";
+    logoutBtn.style.display = "inline-block";
+  }
+
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("currentUser");
+    location.reload(); // перезавантажити сторінку
+  });
+</script>
+</body>
+</html>

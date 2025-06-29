@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навушники – CT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="icon5.png">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background-color: #f6e4c1; padding: 20px; }
+    h1 { font-size: 28px; margin-bottom: 20px; color: #8c3b16; }
+    .grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .card { background: white; border-radius: 12px; padding: 20px; width: 200px; text-align: center; }
+    .card img { width: 100%; height: auto; border-radius: 8px; }
+    .card button { margin-top: 10px; display: block; text-decoration: none; border: none; background: #8c3b16; color: white; padding: 8px; border-radius: 6px; cursor: pointer; }
+
+    .card a { margin-top: 10px; display: block; text-decoration: none; border: none; background: #8c3b16; color: white; border-radius: 6px; cursor: pointer; align: center;}
+    header, footer { background-color: #fff0da; 
+      padding: 20px 40px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      border-radius: 8px; }
+    .logo { font-family: 'Montserrat', sans-serif; 
+      font-size: 24px; 
+      font-weight: 700; 
+      color: #8c3b16; }
+    nav a { margin: 0 15px; 
+      text-decoration: none; 
+      color: #2c1e13; 
+      font-weight: 500;
+      border-radius: 8px; }
+    .cta-btn { background: #d9981d; 
+      color: white; 
+      padding: 10px 20px;
+       border-radius: 8px; 
+       text-decoration: none; 
+       font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">CT</div>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+      <a href="favorites.html">Обране</a>
+  
+      
+    </nav>
+    <div id="user-area" style="text-align: right; padding: 10px;">
+  <span id="user-name"></span>
+  <a href="login.html" id="login-link" style="
+  margin-left: 10px;
+  ">Увійти</a>
+  <button id="logout-btn" style="
+  display:none; 
+  margin-left: 10px; 
+  background:#8c3b16; 
+  color:white; 
+  border:none; 
+  padding:5px 10px; 
+  border-radius:6px; 
+  cursor:pointer;
+  ">Вийти</button>
+</div>
+  </header>
+  <br>
+  <h1>Для дому</h1>
+  <br>
+  <div class="grid">
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S28eca0528f604afb9ff7acd085d9f5d8O.jpg_220x220q75.jpg" alt="фото" />
+        <p>Місячне світло</p>
+        <button onclick="addToFavorites('Місячне світло', 'Дитячий день Ручний розпис Місячне світло Упаковка з фарбованих матеріалів своїми руками Дитячий садок Заняття для батьків і дітей Планета Нічник', 'https://rozetka.com.ua/ua/347858931/p347858931/', 'https://s.click.aliexpress.com/e/_oELwBIe', 'https://ae-pic-a1.aliexpress-media.com/kf/S28eca0528f604afb9ff7acd085d9f5d8O.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Місячне світло', 'Дитячий день Ручний розпис Місячне світло Упаковка з фарбованих матеріалів своїми руками Дитячий садок Заняття для батьків і дітей Планета Нічник', 'https://rozetka.com.ua/ua/347858931/p347858931/', 'https://s.click.aliexpress.com/e/_oELwBIe', 'https://ae-pic-a1.aliexpress-media.com/kf/S28eca0528f604afb9ff7acd085d9f5d8O.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+      <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S44e1591ae28d41d7bbb40920a0624972Y.jpg_220x220q75.jpg" alt="фото" />
+        <p>Акумуляторний індукційний нічник</p>
+        <button onclick="addToFavorites('Акумуляторний індукційний нічник', 'Датчик руху Світлодіодне освітлення шафи Акумуляторний індукційний нічник Бездротовий портативний детектор Лампа Кухня Підсвічування сходів', 'https://rozetka.com.ua/ua/451215719/p451215719/', 'https://s.click.aliexpress.com/e/_oE8dFKW', 'https://ae-pic-a1.aliexpress-media.com/kf/S44e1591ae28d41d7bbb40920a0624972Y.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Акумуляторний індукційний нічник', 'Датчик руху Світлодіодне освітлення шафи Акумуляторний індукційний нічник Бездротовий портативний детектор Лампа Кухня Підсвічування сходів', 'https://rozetka.com.ua/ua/451215719/p451215719/', 'https://s.click.aliexpress.com/e/_oE8dFKW', 'https://ae-pic-a1.aliexpress-media.com/kf/S44e1591ae28d41d7bbb40920a0624972Y.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+    <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sb07878b067d948f481f776c1d188026dB.png_220x220.png" alt="фото" />
+        <p>Складний і портативний чайник 600 мл</p>
+        <button onclick="addToFavorites('Складний і портативний чайник 600 мл', 'Складний і портативний чайник 600 мл Водонагрівач Побутовий туристичний електричний чайник для води Кухонна техніка Каструля для кипятіння води', 'https://bt.rozetka.com.ua/ua/426400050/p426400050/', 'https://s.click.aliexpress.com/e/_onOzOLe', 'https://ae-pic-a1.aliexpress-media.com/kf/Sb07878b067d948f481f776c1d188026dB.png_220x220.png')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Складний і портативний чайник 600 мл', 'Складний і портативний чайник 600 мл Водонагрівач Побутовий туристичний електричний чайник для води Кухонна техніка Каструля для кипятіння води', 'https://bt.rozetka.com.ua/ua/426400050/p426400050/', 'https://s.click.aliexpress.com/e/_onOzOLe', 'https://ae-pic-a1.aliexpress-media.com/kf/Sb07878b067d948f481f776c1d188026dB.png_220x220.png')"><button>Переглянути</button></a>
+      </div>
+
+    <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S7cd619e7a88c4f7a90826c70b7a07b737.jpg_220x220q75.jpg" alt="фото" />
+        <p>Водяний насос</p>
+        <button onclick="addToFavorites('Водяний насос', 'Водяний насос Пляшка Автоматичний електричний диспенсер для води Побутовий галонний перемикач для пиття Автоматичні розумні прилади для очищення води', 'https://bt.rozetka.com.ua/ua/automatice_water_dispenser_usb_5680-0001/p226231969/', 'https://s.click.aliexpress.com/e/_opWmQyo', 'https://ae-pic-a1.aliexpress-media.com/kf/S7cd619e7a88c4f7a90826c70b7a07b737.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('Водяний насос', 'Водяний насос Пляшка Автоматичний електричний диспенсер для води Побутовий галонний перемикач для пиття Автоматичні розумні прилади для очищення води', 'https://bt.rozetka.com.ua/ua/automatice_water_dispenser_usb_5680-0001/p226231969/', 'https://s.click.aliexpress.com/e/_opWmQyo', 'https://ae-pic-a1.aliexpress-media.com/kf/S7cd619e7a88c4f7a90826c70b7a07b737.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+    <div class="card">
+        <img src="https://ae-pic-a1.aliexpress-media.com/kf/S6d0712a20fd447f38b3448acff90381az.jpg_220x220q75.jpg" alt="фото" />
+        <p>SZUK C012MAX Автомобільний пилосос </p>
+        <button onclick="addToFavorites('SZUK C012MAX Автомобільний пилосос ', 'SZUK C012MAX Автомобільний пилосос Міні-машина з сильним всмоктуванням Бездротова портативна повітродувка Побутова техніка', 'https://rozetka.com.ua/ua/389491830/p389491830/?advToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTA2MTg4MjAsInBheWxvYWQiOiJ7XCJwZ1wiOjI4NTkxNzAwLFwiY1wiOjM0MDQ1LFwiY3RcIjoxLFwiY3BjXCI6MSxcInNjXCI6NyxcInBsXCI6MyxcImNpZFwiOjQ2MzEyNjMsXCJwXCI6MTQsXCJnXCI6MX0ifQ.Z1DQMe9sr0SSbItj1UY2Y9VROHHSgaHLvqXM-E-N5hA&advSource=catalog', 'https://s.click.aliexpress.com/e/_okS9RS4', 'https://ae-pic-a1.aliexpress-media.com/kf/S6d0712a20fd447f38b3448acff90381az.jpg_220x220q75.jpg')">Додати в обране</button>
+        <a href="details.html" onclick="openProduct('SZUK C012MAX Автомобільний пилосос ', 'SZUK C012MAX Автомобільний пилосос Міні-машина з сильним всмоктуванням Бездротова портативна повітродувка Побутова техніка', 'https://rozetka.com.ua/ua/389491830/p389491830/?advToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTA2MTg4MjAsInBheWxvYWQiOiJ7XCJwZ1wiOjI4NTkxNzAwLFwiY1wiOjM0MDQ1LFwiY3RcIjoxLFwiY3BjXCI6MSxcInNjXCI6NyxcInBsXCI6MyxcImNpZFwiOjQ2MzEyNjMsXCJwXCI6MTQsXCJnXCI6MX0ifQ.Z1DQMe9sr0SSbItj1UY2Y9VROHHSgaHLvqXM-E-N5hA&advSource=catalog', 'https://s.click.aliexpress.com/e/_okS9RS4', 'https://ae-pic-a1.aliexpress-media.com/kf/S6d0712a20fd447f38b3448acff90381az.jpg_220x220q75.jpg')"><button>Переглянути</button></a>
+      </div>
+
+
+  </div>
+  <script>
+    function addToFavorites(name, description, url, img) {
+      let favorites1 = JSON.parse(localStorage.getItem('favorites1')) || [];
+      if (!favorites1.some(item => item.name === name)) {
+        favorites1.push({ name, description, url, img });
+        localStorage.setItem('favorites1', JSON.stringify(favorites1));
+        alert(`${name} додано до обраного!`);
+      } else {
+        alert(`${name} вже в обраному.`);
+      }
+    }
+
+    function openProduct(name, description, url, img) {
+      localStorage.setItem('selectedProduct', JSON.stringify({ name, description, url, img }));
+      window.location.href = 'product.html';
+    }
+  </script>
+  <script>
+  const currentUser = localStorage.getItem("currentUser");
+  const userNameSpan = document.getElementById("user-name");
+  const loginLink = document.getElementById("login-link");
+  const logoutBtn = document.getElementById("logout-btn");
+
+  if (currentUser) {
+    userNameSpan.textContent = currentUser;
+    loginLink.style.display = "none";
+    logoutBtn.style.display = "inline-block";
+  }
+
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("currentUser");
+    location.reload(); // перезавантажити сторінку
+  });
+</script>
+</body>
+</html>
