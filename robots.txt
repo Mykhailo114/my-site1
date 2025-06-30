@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
 Sitemap: https://example.com/sitemap.xml
+Disallow: /login.html
+Disallow: /sing%20in.html
