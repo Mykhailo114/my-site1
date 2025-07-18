@@ -113,10 +113,10 @@
 
   </div>
   <script>
-    function addToFavorites(name, description, url, img) {
+    function addToFavorites(name, description, url1, url2, img) {
       let favorites1 = JSON.parse(localStorage.getItem('favorites1')) || [];
       if (!favorites1.some(item => item.name === name)) {
-        favorites1.push({ name, description, url, img });
+        favorites1.push({ name, description, url1, url2, img });
         localStorage.setItem('favorites1', JSON.stringify(favorites1));
         alert(`${name} додано до обраного!`);
       } else {
@@ -124,8 +124,8 @@
       }
     }
 
-    function openProduct(name, description, url, img) {
-      localStorage.setItem('selectedProduct', JSON.stringify({ name, description, url, img }));
+    function openProduct(name, description, url1, url2, img) {
+      localStorage.setItem('selectedProduct', JSON.stringify({ name, description, url1, url2, img }));
       window.location.href = 'product.html';
     }
   </script>
